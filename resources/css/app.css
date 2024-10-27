@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+input, textarea, select {
+    background-color: white; /* Color base deseado */
+  }
+  
+  input:valid, textarea:valid, select:valid {
+    background-color: white; /* Color después de validación */
+  }
+  

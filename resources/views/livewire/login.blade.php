@@ -1,29 +1,22 @@
-<div class="max-w-md mx-auto mt-10 bg-white p-6 rounded-lg shadow-md">
-    <h2 class="text-2xl font-bold mb-6">Iniciar Sesión</h2>
-    
-    <form wire:submit.prevent="login">
-        <div class="mb-4">
-            <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico</label>
-            <input type="email" id="email" wire:model="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-500" required>
-            @error('email') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
+<div x-data="{ isOpen: false }" @open-login-modal.window="isOpen = true">
+    <button @click="isOpen = true" style="display: none;">Open Modal</button>
+
+    <div x-show="isOpen" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
+        <div class="bg-white rounded-lg p-6 w-1/3">
+            <h2 class="text-lg font-bold mb-4 text-dark-gray">Iniciar Sesión</h2>
+            <form>
+                <div class="mb-4">
+                    <label for="login-email" class="block text-dark-gray">Correo electrónico</label>
+                    <input type="email" id="login-email" class="border rounded w-full px-3 py-2 text-dark-gray border-blue bg-white placeholder:text-sm placeholder:text-dark-gray/70" placeholder="Ingresá tu correo electrónico" wire:model="email" required>
+                </div>
+                <div class="mb-4">
+                    <label for="login-password" class="block text-dark-gray">Contraseña</label>
+                    <input type="password" id="login-password" class="border rounded w-full px-3 py-2 text-dark-gray border-blue bg-white placeholder:text-sm placeholder:text-dark-gray/70" placeholder="Ingresá tu contraseña" wire:model="password"  required>
+                </div>
+                <button type="submit" class="w-full bg-blue text-white hover:bg-blue/60 rounded px-4 py-2">Iniciar Sesión</button>
+            </form>
+            <p class="text-dark-gray ">¿Todavía no te registraste? Hacé clic <a href="#" @click.prevent="$dispatch('close-login-and-open-register')" class="font-bold ">acá</a> para registrar tu cuenta.</p>
+            <button @click="isOpen = false" class="mt-4 text-red-500">Cerrar</button>
         </div>
-
-        <div class="mb-4">
-            <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
-            <input type="password" id="password" wire:model="password" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-500" required>
-            @error('password') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
-        </div>
-
-        <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition duration-200">Iniciar Sesión</button>
-    </form>
-
-    <div class="mt-4 text-sm">
-        <p>¿No tienes una cuenta? <a href="{{ route('register') }}" class="text-blue-500 hover:underline">Regístrate</a></p>
     </div>
-
-    @if (session()->has('error'))
-        <div class="mt-4 text-red-500 text-sm">
-            {{ session('error') }}
-        </div>
-    @endif
 </div>

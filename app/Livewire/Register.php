@@ -36,6 +36,6 @@ class Register extends Component
 
     public function render()
     {
-        return view('register'); // Asegúrate de que esta vista exista
+        return view('livewire.register'); // Asegúrate de que esta vista exista
     }
 }

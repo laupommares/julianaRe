@@ -19,4 +19,5 @@
             <button @click="isOpen = false" class="mt-4 text-red-500">Cerrar</button>
         </div>
     </div>
+    @livewire('register') 
 </div>

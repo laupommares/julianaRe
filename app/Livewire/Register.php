@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 class Register extends Component
 {
     public $name;
+    public $last_name;
     public $email;
     public $password;
     public $password_confirmation;
@@ -31,7 +32,7 @@ class Register extends Component
 
         // Aquí podrías redirigir al usuario o mostrar un mensaje de éxito
         session()->flash('message', 'Registro exitoso.');
-        return redirect()->route('login'); // Redirigir a la página de login, por ejemplo
+        return redirect()->route('livewire.login'); // Redirigir a la página de login, por ejemplo
     }
 
     public function render()

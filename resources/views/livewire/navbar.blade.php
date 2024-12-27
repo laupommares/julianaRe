@@ -1,4 +1,4 @@
-<div>
+<div x-data="{ isOpen: false }">
     <nav class="w-full h-20 bg-green bg-opacity-80 fixed z-40">
         <div class="flex items-center justify-between">
             <div class="flex">
@@ -15,33 +15,37 @@
                 </ul>
             </div>
             <div class="flex pr-16">
-                <button type="button" @click="$dispatch('open-login-modal')" class="text-dark-gray hover:text-white">Iniciá Sesión/Registrate</button>
-                
-                {{-- <button type="button" class="relative h-12 w-12 m-2 bg-light-orange rounded-full inline-flex items-center justify-center text-white hover:bg-orange hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                @if ($isAuthenticated)
+                <button type="button" class="relative h-12 w-12 m-2 bg-light-orange rounded-full inline-flex items-center justify-center text-white hover:bg-orange hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
                     <span class="material-symbols-outlined text-white">
                         notification_important
                     </span>
-                </button>                
-                <div x-data="{ isOpen: false }" class="relative inline-block text-left">
-                    <div>
-                        <button @click="isOpen = !isOpen" type="button" class="relative h-12 w-12 m-2 inline-flex rounded-full bg-green-dark text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-green-dark" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                            <img class="h-12 w-12 rounded-full" src="/juli.png" alt="">
-                        </button>
-                    </div>
-                    <div x-show="isOpen" @click.away="isOpen = false" class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-                        <div x-data="{}" class="py-1" role="none">
-                            <button type="button" @click="$dispatch('open-login-modal')" class="block w-full px-4 py-2 text-left text-sm text-green-dark hover:bg-orange hover:bg-opacity-50" role="menuitem" tabindex="-1" id="menu-item-0">Iniciar sesión</button>
-                            <a href="#" @click.prevent="$dispatch('open-modal')" class="block w-full px-4 py-2 text-left text-sm text-green-dark hover:bg-orange hover:bg-opacity-50" role="menuitem" tabindex="-1" id="menu-item-3">
-                                Registrate
-                            </a>
+                </button>   
+                    <!-- Botón de usuario con desplegable -->
+                    <button @click="isOpen = !isOpen" type="button" class="relative h-12 w-12 m-2 inline-flex rounded-full bg-green-dark text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-green-dark" aria-expanded="false" aria-haspopup="true">
+                        <img class="h-12 w-12 rounded-full" src="/juli.png" alt=""> <!-- Aquí puedes colocar la foto del usuario -->
+                    </button>
+
+                    <!-- Menú desplegable -->
+                    <div x-show="isOpen" @click.away="isOpen = false" class="absolute right-0 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <div class="py-1">
+                            <!-- Opción de Perfil -->
+                            <button @click="$dispatch('open-user-profile-modal')"  class="block px-4 py-2 text-sm text-green-dark hover:bg-gray-100">Perfil</button>
+                            <!-- Opción de Cerrar sesión -->
+                            <form method="POST" action="{{ route('logout') }}" class="block px-4 py-2 text-sm text-green-dark hover:bg-gray-100">
+                                @csrf
+                                <button type="submit" class="w-full text-left">Cerrar sesión</button>
+                            </form>
                         </div>
                     </div>
-                </div> --}}
+                @else
+                    <!-- Mostrar el botón de inicio de sesión/registro cuando no está autenticado -->
+                    <button type="button" @click="$dispatch('open-login-modal')" class="text-dark-gray hover:text-white">Iniciá Sesión/Registrate</button>
+                @endif
             </div>
         </div>
     </nav>
-       
+    
     @livewire('login') <!-- Aquí se incluye el componente del modal -->
-    <!-- Modal Registro -->
-
+    @livewire('user-profile')
 </div>

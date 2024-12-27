@@ -4,7 +4,7 @@
     <div x-show="isOpen" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
         <div class="bg-white rounded-lg p-6 w-1/3">
             <h2 class="text-lg font-bold mb-4 text-dark-gray">Iniciar Sesión</h2>
-            <form>
+            <form wire:submit.prevent="login">
                 <div class="mb-4">
                     <label for="login-email" class="block text-dark-gray">Correo electrónico</label>
                     <input type="email" id="login-email" class="border rounded w-full px-3 py-2 text-dark-gray border-blue bg-white placeholder:text-sm placeholder:text-dark-gray/70" placeholder="Ingresá tu correo electrónico" wire:model="email" required>

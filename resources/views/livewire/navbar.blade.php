@@ -9,7 +9,7 @@
                             $isActive = request()->is(trim($route, '/')) || request()->is(trim($route, '/'). '/*');
                         @endphp
                         <li class="flex text-sm font-raleway items-center font-semibold">
-                            <a href="{{ url($route) }}" class="w-full h-full hover:bg-white hover:text-green rounded-md px-3 py-2 flex items-center {{ $isActive ? 'text-green bg-white' : 'text-white' }} ">{{ $option }}</a>
+                            <a href="{{ url($route) }}" class="w-full text-base h-full hover:bg-white hover:text-green rounded-md px-3 py-2 flex items-center {{ $isActive ? 'text-green bg-white' : 'text-white' }} ">{{ $option }}</a>
                         </li>
                     @endforeach 
                 </ul>
@@ -40,7 +40,7 @@
                     </div>
                 @else
                     <!-- Mostrar el botón de inicio de sesión/registro cuando no está autenticado -->
-                    <button type="button" @click="$dispatch('open-login-modal')" class="text-dark-gray hover:text-white">Iniciá Sesión/Registrate</button>
+                    <button type="button" @click="$dispatch('open-login-modal')" class="text-dark-gray hover:text-white font-semibold">Iniciá Sesión/Registrate</button>
                 @endif
             </div>
         </div>

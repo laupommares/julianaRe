@@ -16,6 +16,9 @@
         </div>    
     </header>
     <livewire:coaching-nutrition/>
+    <livewire:google-reviews />
+
+
     <livewire:rating/>
     <livewire:contact/>
 @endsection

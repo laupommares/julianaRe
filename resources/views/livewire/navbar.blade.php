@@ -22,9 +22,6 @@
                     </span>
                 </button>   
                     <!-- Botón de usuario con desplegable -->
-                    <li @click="isOpen = !isOpen" type="button" class="flex text-sm font-raleway items-center font-semibold">
-                        <a href="{{ url($route) }}" class="w-full text-base h-full hover:bg-white rounded-md px-3 py-2 flex items-center text-dark {{ $isActive ? 'text-dark bg-white' : '' }} ">{{ $option }}</a>
-                    </li>
                     <button @click="isOpen = !isOpen" type="button" class="relative h-12 w-12 m-2 inline-flex rounded-full bg-green-dark text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-green-dark" aria-expanded="false" aria-haspopup="true">
                         <img class="h-12 w-12 rounded-full" src="/juli.png" alt=""> <!-- Aquí puedes colocar la foto del usuario -->
                     </button>
@@ -43,9 +40,10 @@
                     </div>
                 @else
                     <!-- Mostrar el botón de inicio de sesión/registro cuando no está autenticado -->
-                    <li type="button" @click="$dispatch('open-login-modal')" class="flex text-sm font-raleway items-center font-semibold">
-                        <a href="{{ url($route) }}" class="w-full text-base h-full hover:bg-white rounded-md px-3 py-2 flex items-center text-dark {{ $isActive ? 'text-dark bg-white' : '' }} ">Iniciá Sesión/Registrate</a>
+                    <li type="button" @click="$dispatch('open-login-modal')" class="flex text-sm font-raleway items-center font-semibold cursor-pointer">
+                        <span class="w-full text-base h-full hover:bg-white rounded-md px-3 py-2 flex items-center text-dark">Iniciá Sesión/Registrate</span>
                     </li>
+                    
                 @endif
             </div>
         </div>

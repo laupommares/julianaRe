@@ -16,16 +16,29 @@ class Register extends Component
 
     protected $rules = [
         'name' => 'required|string|max:255',
+        'last_name' => 'required|string|max:255',
         'email' => 'required|string|email|max:255|unique:users',
         'password' => 'required|string|min:8|confirmed',
+        'password_confirmation' => 'nullable|string|min:8',
     ];
-
+    protected $messages = [
+        'name.required' => 'El nombre es obligatorio.',
+        'last_name.required' => 'El apellido es obligatorio.',
+        'email.required' => 'El correo electrónico es obligatorio.',
+        'email.email' => 'Por favor, ingresa un correo válido.',
+        'email.unique' => 'Este correo ya está registrado.',
+        'password.required' => 'La contraseña es obligatoria.',
+        'password.min' => 'La contraseña debe tener al menos 8 caracteres.',
+        'password.confirmed' => 'Las contraseñas no coinciden.',
+    ];
+    
     public function register()
     {
         $this->validate();
 
         User::create([
             'name' => $this->name,
+            'last_name' => $this->last_name, 
             'email' => $this->email,
             'password' => Hash::make($this->password),
         ]);

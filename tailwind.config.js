@@ -13,7 +13,12 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Roboto', ...defaultTheme.fontFamily.sans], // Texto normal
+                condensed: ['Roboto Condensed', 'sans-serif'],
+                flex: ['Roboto Flex', 'sans-serif'],
+                mono: ['Roboto Mono', 'monospace'],
+                serif: ['Roboto Serif', 'serif'],
+                slab: ['Roboto Slab', 'serif'],
             },
             colors: {
                 beige: '#D0B9A1', 

@@ -7,22 +7,37 @@
                 <form wire:submit.prevent="register">
                     <div class="mb-4">
                         <label for="name" class="block text-dark-gray">Nombre</label>
-                        <input type="text" id="name" wire:model="name" class="border rounded w-full px-3 py-2 text-dark-gray border-blue bg-white placeholder:text-sm placeholder:text-dark-gray/70" placeholder="Ingresá tu nombre" required>
+                        <input type="text" id="name" wire:model="name" class="border rounded w-full px-3 py-2 text-dark-gray border-blue bg-white placeholder:text-sm placeholder:text-dark-gray/70" placeholder="Ingresá tu nombre">
+                        @error('name')
+                            <p class="text-red-500 text-sm mt-1">{{ $message }}</p>  <!-- Estilos agregados -->
+                        @enderror
                     </div>
                     <div class="mb-4">
                         <label for="name" class="block text-dark-gray">Apellido</label>
-                        <input type="text" id="apellido" wire:model="last_name" class="border rounded w-full px-3 py-2 text-dark-gray border-blue bg-white placeholder:text-sm placeholder:text-dark-gray/70" placeholder="Ingresá tu apell" required>
+                        <input type="text" id="apellido" wire:model="last_name" class="border rounded w-full px-3 py-2 text-dark-gray border-blue bg-white placeholder:text-sm placeholder:text-dark-gray/70" placeholder="Ingresá tu apell">
+                        @error('last_name')
+                            <p class="text-red-500 text-sm mt-1">{{ $message }}</p>  <!-- Estilos agregados -->
+                        @enderror
                     </div>
                     <div class="mb-4">
                         <label for="email" class="block text-dark-gray">Correo electrónico</label>
-                        <input type="email" id="email" wire:model="email" class="border rounded w-full px-3 py-2 text-dark-gray border-blue bg-white placeholder:text-sm placeholder:text-dark-gray/70" placeholder="Ingresá tu correo electrónico" required>
+                        <input type="email" id="email" wire:model="email" class="border rounded w-full px-3 py-2 text-dark-gray border-blue bg-white placeholder:text-sm placeholder:text-dark-gray/70" placeholder="Ingresá tu correo electrónico">
+                        @error('email')
+                            <p class="text-red-500 text-sm mt-1">{{ $message }}</p>  <!-- Estilos agregados -->
+                        @enderror
                     </div>
                     <div class="mb-4">
                         <label for="password" class="block text-dark-gray">Contraseña</label>
-                        <input type="password" id="password" wire:model="password" class="border rounded w-full px-3 py-2 text-dark-gray border-blue bg-white placeholder:text-sm placeholder:text-dark-gray/70" placeholder="Ingresá tu contraseña" required>
+                        <input type="password" id="password" wire:model="password" class="border rounded w-full px-3 py-2 text-dark-gray border-blue bg-white placeholder:text-sm placeholder:text-dark-gray/70" placeholder="Ingresá tu contraseña">
+                        @error('password')
+                            <p class="text-red-500 text-sm mt-1">{{ $message }}</p>  <!-- Estilos agregados -->
+                        @enderror
                     </div>
                     <div class="mb-4">
-                        <input type="password" id="confirm-password" wire:model="password_confirmation" class="border rounded w-full px-3 py-2 text-dark-gray border-blue bg-white placeholder:text-sm placeholder:text-dark-gray/70" placeholder="Reingresa tu contraseña" required>
+                        <input type="password" id="confirm-password" wire:model="password_confirmation" class="border rounded w-full px-3 py-2 text-dark-gray border-blue bg-white placeholder:text-sm placeholder:text-dark-gray/70" placeholder="Reingresa tu contraseña">
+                        @error('confirm-password')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>  <!-- Estilos agregados -->
+                    @enderror
                     </div>
                     <button type="submit" class="w-full bg-blue text-white hover:bg-blue/60 rounded px-4 py-2">Registrate</button>
                 </form>

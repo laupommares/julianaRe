@@ -17,8 +17,9 @@ class Navbar extends Component
         // Definición de las opciones del menú
         $this->menuOptions = [
             'Inicio' => './',
-            'Turnos' => '/turnos',
             'Sobre mi' => '/about-me',
+            'Blog' => '/blog',
+            'Turnos' => '/turnos',
             'Contactame' => '/contactame'
         ];
     }

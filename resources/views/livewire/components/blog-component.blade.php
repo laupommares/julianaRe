@@ -12,7 +12,7 @@
                                 <img class="w-full object-cover h-[315px]" src="{{ asset('tunos.jpg') }}" alt="">
                             </figure>
                             <div class="flex flex-col text-dark bg-white rounded-b-xl gap-4 p-4">
-                                <h2 class="card-title">Cómo Conectar con lo que Comés</h2>
+                                <h2 class="card-title">¿Cómo Conectar con lo que Comés?</h2>
                                 <p class="text-base ">Descubrí cómo la atención plena en tus hábitos alimenticios puede transformar tu relación con la comida y mejorar tu bienestar general.</p>
                                 <a href="">
                                     <button class="bg-orange font-bold w-40 rounded-md h-12">Leer artículo</button>
@@ -32,9 +32,10 @@
                             </button>
                         </div>
                     </div>
-                    <div class="flex pt-8">
+                    <div class="flex flex-col gap-8 pt-8">
                         <p class="text-base font-light leading-8">En esta sección, comparto artículos, consejos y recursos sobre nutrición y bienestar que considero fundamentales para ayudarte a lograr un estilo de vida más saludable y equilibrado. 
                             ¡Todo lo que necesitas para sentirte mejor!</p>
+                        <a href="">Accedé al Blog con todos los artículos</a>
                     </div>
                 </div>
             </div>

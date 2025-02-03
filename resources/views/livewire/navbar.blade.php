@@ -1,8 +1,8 @@
 <div x-data="{ isOpen: false }">
     <nav class="w-full h-20 bg-green bg-opacity-80 fixed z-40">
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between mx-auto px-4 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px]">
             <div class="flex">
-                <img src="{{ asset('logo.png') }}" class="ml-16 w-20 h-20" alt="">
+                <img src="{{ asset('logo.png') }}" class="w-20 h-20" alt="">
                 <ul class="flex space-x-4 m-6">
                     @foreach ($menuOptions as $option => $route)
                         @php
@@ -14,7 +14,7 @@
                     @endforeach 
                 </ul>
             </div>
-            <div class="flex pr-16">
+            <div class="flex">
                 @if ($isAuthenticated)
                 <button type="button" class="relative h-12 w-12 m-2 bg-light-orange rounded-full inline-flex items-center justify-center text-white hover:bg-orange hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
                     <span class="material-symbols-outlined text-white">

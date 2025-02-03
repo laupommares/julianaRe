@@ -76,7 +76,7 @@
             <button 
                 @click="if (currentPage > 0) currentPage--" 
                 :disabled="currentPage === 0"
-                class="px-4 py-2 bg-gray-300 text-black rounded hover:bg-gray-400 disabled:opacity-50"
+                class="px-4 py-2 bg-gray-300 text-black disabled:opacity-50"
             >
                 <span class="material-symbols-outlined" style="transform: scaleX(-1) scale(1.5, 1); font-size: 32px;">
                     trending_flat
@@ -85,7 +85,7 @@
             <button 
                 @click="if (currentPage < Math.ceil({{ count($orderedReviews) }} / reviewsPerPage) - 1) currentPage++" 
                 :disabled="currentPage === Math.ceil({{ count($orderedReviews) }} / reviewsPerPage) - 1"
-                class="px-4 py-2 bg-gray-300 text-black rounded hover:bg-gray-400 disabled:opacity-50"
+                class="px-4 py-2 bg-gray-300 text-black disabled:opacity-50"
             >
                 <span class="material-symbols-outlined scale-x-150" style="font-size: 32px;">
                     trending_flat

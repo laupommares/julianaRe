@@ -1,8 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// routes/web.php
+
 use App\Livewire\Login;
 
 Route::view('/', 'pages.home')->name('pages.home');
-Route::post('logout', [Login::class, 'logout'])->name('logout');
+Route::view('/turnos', 'pages.turnos')->name('pages.turnos');
+Route::view('/about-me', 'pages.about-me')->name('pages.about-me');
+Route::view('/contactame', 'pages.contactame')->name('pages.contactame');
 
+Route::post('logout', [Login::class, 'logout'])->name('logout');

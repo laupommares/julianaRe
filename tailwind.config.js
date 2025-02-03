@@ -23,7 +23,7 @@ export default {
             colors: {
                 beige: '#D0B9A1', 
                 dark: '#46402A', 
-                gray: '#D9D9D9', 
+                'light-gray': '#D9D9D9', 
                 green: '#AADBC5',
                 blue: '#73A1AC',
                 'light-orange': '#FFC93D',

@@ -1,6 +1,5 @@
 
 @extends('livewire.layouts.app')
 @section('content')
-
-    <livewire:components.blog-component $type="long"/>
+    <livewire:components.blog-component type="long"/>
 @endsection

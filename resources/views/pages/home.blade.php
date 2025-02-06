@@ -1,7 +1,7 @@
 
 @extends('livewire.layouts.app')
 @section('content')
-    <header id="heade" class="bg-cover bg-center h-[880px]" style="background-image: url('/header.png');">
+    <header id="header" class="bg-cover bg-center h-[880px]" style="background-image: url('/header.png');">
         <div class="mx-auto px-4 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px] flex justify-end h-full items-end">
             <div class="mb-10 card card-compact max-w-[462px] h-[600px] shadow-xl bg-white">
                 <figure class="relative w-full p-4  ">
@@ -20,7 +20,7 @@
     <livewire:stadistics/>
     <livewire:google-reviews/>
     <livewire:components.about-component type="short"/>
-    <livewire:components.blog-component/>
+    <livewire:components.blog-component type="short"/>
     <livewire:components.recipes-component />
     <livewire:contact/>
 @endsection

@@ -19,5 +19,11 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+        
+        Article::factory()
+        ->count(50)
+        ->create();
+
+
     }
 }

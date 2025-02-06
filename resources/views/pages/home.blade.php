@@ -20,7 +20,7 @@
     <livewire:stadistics/>
     <livewire:google-reviews/>
     <livewire:components.about-component type="short"/>
-    <livewire:components.blog-component type="short"/>
+    <livewire:components.blog-component/>
     <livewire:components.recipes-component />
     <livewire:contact/>
 @endsection

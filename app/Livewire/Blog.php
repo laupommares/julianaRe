@@ -3,6 +3,8 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use App\Models\Article;
+
 
 class Blog extends Component
 {

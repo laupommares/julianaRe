@@ -1,9 +1,11 @@
 <?php
 
+use App\Livewire\ShowArticle;
 use Illuminate\Support\Facades\Route;
 // routes/web.php
 
 use App\Livewire\Login;
+
 
 Route::view('/', 'pages.home')->name('pages.home');
 Route::view('/turnos', 'pages.turnos')->name('pages.turnos');

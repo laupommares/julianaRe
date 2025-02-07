@@ -16,7 +16,6 @@ class Blog extends Component
 
     public function render()
     {
-        // Pasar la variable $articles explícitamente a la vista
         return view('pages.blog', ['articles' => $this->articles]);
     }
 }

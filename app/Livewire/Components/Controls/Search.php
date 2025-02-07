@@ -9,6 +9,11 @@ class Search extends Component
 {
     public $searchText = '';
     public $results = [];
+    public function mount()
+    {
+        // Al cargar la página, mostrar todos los artículos
+        $this->results = Article::all();
+    }
 
     public function updatedSearchText($value)
     {

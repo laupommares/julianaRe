@@ -14,20 +14,17 @@
                 </button>
         </div>
     </form>
-    <div class="mt-8 flex flex-row flex-wrap gap-8 relative">
+
+    <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
         @foreach ($results as $result)
-            <div class="mb-10 card card-compact max-w-[580px] min-h-[420px] shadow-xl bg-light-gray">
-                <figure class="relative m-4">
-                    <img class="w-full object-cover h-[315px]" src="{{ $result->image }}" alt="{{ $result->title }}">
-                </figure>
-                <div class="flex flex-col text-dark bg-white rounded-b-xl gap-4 p-4">
-                    <h2 class="card-title">{{ $result->title }}</h2>
-                    <p class="text-base">{{ $result->description }}</p>
-                    <a href="{{ $result->link }}">
-                        <button class="bg-orange font-bold w-40 rounded-md h-12">Ver más</button>
-                    </a>
-                </div>
-            </div>
+            <livewire:components.cards.card 
+                :image="$result->image"
+                :title="$result->title"
+                :description="$result->description"
+                :link="$result->link"
+            />
         @endforeach
+    
     </div>
+    
 </div>

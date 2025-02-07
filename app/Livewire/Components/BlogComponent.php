@@ -2,18 +2,18 @@
 
 namespace App\Livewire\Components;
 
+use App\Models\Article;
 use Livewire\Component;
 
 class BlogComponent extends Component
 {
-    public $type;  // Definir la propiedad para recibir el valor
-
-    public function mount($type = 'short')  // Asignamos un valor por defecto
-    {
-        $this->type = $type;  // Asignar el valor recibido al componente
-    }
     public function render()
     {
-        return view('livewire.components.blog-component');
+        // Obtener todos los artículos sin paginación, ya que Alpine.js manejará la visualización
+        $articles = Article::all(); 
+
+        return view('livewire.components.blog-component', [
+            'articles' => $articles,
+        ]);
     }
 }

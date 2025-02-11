@@ -12,5 +12,7 @@ Route::view('/turnos', 'pages.turnos')->name('pages.turnos');
 Route::view('/about-me', 'pages.about-me')->name('pages.about-me');
 Route::view('/contactame', 'pages.contactame')->name('pages.contactame');
 Route::view('/blog', 'pages.blog')->name('pages.blog');
+Route::view('/recipes', 'pages.recipes')->name('pages.recipes');
+
 
 Route::post('logout', [Login::class, 'logout'])->name('logout');

@@ -41,7 +41,7 @@
                 @else
                     <!-- Mostrar el botón de inicio de sesión/registro cuando no está autenticado -->
                     <li type="button" @click="$dispatch('open-login-modal')" class="flex text-sm font-raleway items-center font-semibold cursor-pointer">
-                        <span class="w-full text-base h-full hover:bg-white rounded-md flex items-center text-dark font-serif">Iniciá Sesión/Registrate</span>
+                        <span class="w-full px-3 py-2 text-base h-full hover:bg-white rounded-md flex items-center text-dark font-serif">Iniciá Sesión/Registrate</span>
                     </li>
                     
                 @endif

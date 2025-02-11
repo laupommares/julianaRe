@@ -24,15 +24,18 @@ class Login extends Component
     public function login()
     {
         $this->validate();
-
+    
         if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
-            // Redirigir al usuario a la página deseada después de iniciar sesión
+            session()->regenerate(); // Regenerar la sesión para mayor seguridad
+            
+            $this->isAuthenticated = true; // ✅ ACTUALIZAR el estado de autenticación
+            
             return redirect()->route('pages.home'); 
         }
-
-        // Si las credenciales son incorrectas, mostrar un error
+    
         session()->flash('error', 'Las credenciales no son correctas.');
     }
+    
     public function logout()
     {
         Auth::logout();

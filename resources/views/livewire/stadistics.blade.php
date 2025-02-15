@@ -14,7 +14,7 @@
           </dd>
         </div>
         <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-          <dt class="text-base/7 text-[#6D6D6D]">Planes nutricionales diseñados.</dt>
+          <dt class="text-base/7 text-[#6D6D6D]">Programas nutricionales diseñados.</dt>
           <dd class="order-first text-3xl font-semibold tracking-tight text-[#6D6D6D] sm:text-5xl">+ 1000</dd>
         </div>
       </dl>

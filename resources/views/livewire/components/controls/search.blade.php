@@ -11,7 +11,7 @@
                 type="button"
                 class="absolute bg-dark rounded-r-md h-9 w-10 right-0 top-0 flex items-center justify-center"
                 wire:click="clear"
-            >
+                {{empty($searchText) ? 'disabled' : ''}}>
                 <span class="material-symbols-outlined absolute text-white text-xl">
                     {{ $searchText ? 'close' : 'search' }}
                 </span>

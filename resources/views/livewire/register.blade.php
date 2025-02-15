@@ -14,7 +14,7 @@
                     </div>
                     <div class="mb-4">
                         <label for="name" class="block text-dark-gray">Apellido</label>
-                        <input type="text" id="apellido" wire:model="last_name" class="border rounded w-full px-3 py-2 text-dark-gray border-blue bg-white placeholder:text-sm placeholder:text-dark-gray/70" placeholder="Ingresá tu apell">
+                        <input type="text" id="apellido" wire:model="last_name" class="border rounded w-full px-3 py-2 text-dark-gray border-blue bg-white placeholder:text-sm placeholder:text-dark-gray/70" placeholder="Ingresá tu apellido">
                         @error('last_name')
                             <p class="text-red-500 text-sm mt-1">{{ $message }}</p>  <!-- Estilos agregados -->
                         @enderror

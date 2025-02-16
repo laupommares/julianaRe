@@ -10,7 +10,7 @@
                     </div>
                     <p class="leading-8 font-light text-base text-center text-dark">En esta sección, comparto artículos, consejos y recursos sobre nutrición y bienestar que considero fundamentales para ayudarte a lograr un estilo de vida más saludable y equilibrado. ¡Todo lo que necesitas para sentirte mejor!</p>
                    
-                    <livewire:components.controls.search/>
+                    <livewire:components.controls.search type="articles" />
 
                     <!-- Mostrar las cards con los artículos -->
                     <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

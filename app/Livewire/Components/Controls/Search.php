@@ -6,6 +6,7 @@ use Livewire\Component;
 class Search extends Component
 {
     public $searchText = '';
+    public $type = 'articles'; // Valor por defecto
 
     public function updatedSearchText()
     {

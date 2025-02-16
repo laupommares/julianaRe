@@ -10,10 +10,8 @@
                 </div>
                 <p class="leading-8 font-light text-base text-center text-dark">En esta sección, comparto algunas recetas, cosas que probé y te recomiendo, tips para cocinar y más. </p>
                
+                <livewire:components.controls.search type="recipes">
 
-                <!-- Mostrar las cards con los artículos -->
-                <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                </div>
             </div>
         </div>
     </div>

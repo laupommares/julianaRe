@@ -19,5 +19,9 @@
         </div>
     </form>
 
-    <livewire:components.blog.show-results-blog>
+    @if ($type === 'articles')
+        <livewire:components.blog.show-results-blog />
+    @elseif ($type === 'recipes')
+        <livewire:components.recipes.show-results-recipes />
+    @endif
 </div>

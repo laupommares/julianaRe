@@ -6,7 +6,7 @@
             <h1 class="text-5xl font-bold">Soy Juli Re</h1>
             <p class="text-base font-light">Licenciada en Nutrición y Couching. Te acompaño a descubrir un equilibrio real con la comida, sin culpas ni restricciones. Juntos crearemos hábitos sostenibles que nutran tu cuerpo y mente, guiándote hacia una vida más plena y consciente.</p>
             @if ($type === 'short')
-            <a href="{{ route('pages.about-me') }}">
+            <a href="{{ route('livewire.pages.about-me') }}">
                 <button class="bg-orange font-bold w-40 rounded-md h-12">Más sobre mi</button>
             </a>
             @endif

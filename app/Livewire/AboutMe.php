@@ -8,6 +8,6 @@ class AboutMe extends Component
 {
     public function render()
     {
-        return view('pages.about-me');
+        return view('livewire.pages.about-me');
     }
 }

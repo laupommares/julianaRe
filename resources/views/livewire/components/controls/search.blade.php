@@ -19,14 +19,5 @@
         </div>
     </form>
 
-    <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
-        @foreach ($results as $result)
-            <livewire:components.cards.card 
-                :image="$result->image"
-                :title="$result->title"
-                :description="$result->description"
-                :link="$result->link"
-            />
-        @endforeach
-    </div>
+    <livewire:components.blog.show-results-blog>
 </div>

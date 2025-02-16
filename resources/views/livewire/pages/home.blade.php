@@ -11,7 +11,7 @@
                     <h2 class="card-title">¡Comenzá hoy!</h2>
                     <p class="text-base">Diseño planes pensados para acompañarte a lograr el bienestar que mereces, respetando tus necesidades únicas. ¡Este es el primer paso hacia tu mejor versión!</p>
                     <div class="card-actions justify-end">
-                        <button class="text-dark w-[430px] h-12 font-semibold bg-green px-4 py-2 rounded-sm text-xl ">Saca turno acá!</button>
+                        <button class="text-dark w-[430px] h-12 font-semibold bg-green px-4 py-2 rounded-sm text-xl">Saca turno acá!</button>
                     </div>
                 </div>
             </div>    
@@ -22,5 +22,4 @@
     <livewire:components.blog-component/>
     <livewire:components.recipes-component />
     <livewire:components.about-component type="short"/>
-    <livewire:contact/>
 @endsection

@@ -1,5 +1,5 @@
 <?php
-namespace App\Livewire;
+namespace App\Livewire\Pages;
 
 use App\Models\Article;
 use Livewire\Component;

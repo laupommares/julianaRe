@@ -75,6 +75,6 @@
         </div>
     </nav>
     
-    @livewire('login') <!-- Aquí se incluye el componente del modal -->
+    @livewire('components.controls.login') <!-- Aquí se incluye el componente del modal -->
     @livewire('user-profile')
 </div>

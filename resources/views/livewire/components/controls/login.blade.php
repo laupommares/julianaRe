@@ -19,7 +19,7 @@
             <p class="text-dark">¿Todavía no te registraste? Hacé clic <a href="#" @click.prevent="$dispatch('close-login-and-open-register')" class="font-bold ">acá</a> para registrar tu cuenta.</p>
         </div>
     </div>
-    @livewire('register') 
+    @livewire('components.controls.register') 
 </div>
 
 

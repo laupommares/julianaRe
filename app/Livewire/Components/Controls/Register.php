@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Components\Controls;
 
 use Livewire\Component;
 use App\Models\User;
@@ -50,6 +50,6 @@ class Register extends Component
 
     public function render()
     {
-        return view('livewire.register'); // Asegúrate de que esta vista exista
+        return view('livewire.components.controls.register'); // Asegúrate de que esta vista exista
     }
 }

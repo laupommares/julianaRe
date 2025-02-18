@@ -30,13 +30,13 @@
                         <img src="whatsapp-nutrucionista-juliana-re.png" alt="WhatsApp Juliana Re nutricionista" class="whatsapp-icon">
                         <span>+54 9 2346 483632</span>
                     </a>
-                    <a href="mailto:tuemail@example.com" class="flex gap-2 items-center">
+                    <a href="mailto:julianare88@gmail.com" class="flex gap-2 items-center">
                         <img src="email-nutrucionista-juliana-re.png" alt="Email Juliana Re Nutricionista" class="email-icon">
-                        <span>tuemail@example.com</span>
+                        <span>julianare88@gmail.com</span>
                     </a>
                 </div>
                 <div class="flex justify-end gap-4">
-                    <a href="https://instagram.com/tuusuario" target="_blank" class="hover:opacity-75">
+                    <a href="https://www.instagram.com/coachjulianare/?hl=es" target="_blank" class="hover:opacity-75">
                         <img src="instagram-nutrucionista-juliana-re.png" alt="Instagram" class="w-6 h-6">
                     </a>
                     <a href="https://twitter.com/tuusuario" target="_blank" class="hover:opacity-75">

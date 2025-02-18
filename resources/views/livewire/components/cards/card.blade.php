@@ -1,4 +1,4 @@
-<div class="card card-compact max-w-[520px] h-[540px] shadow-xl bg-light-gray">
+<div class="card card-compact h-[540px] shadow-xl bg-light-gray">
     <figure class="relative m-4">
         <img class="w-full object-cover h-[315px]" src="{{ $image }}" alt="{{ $title }}">
     </figure>

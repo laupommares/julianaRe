@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Components\Controls;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
@@ -31,6 +31,6 @@ class Navbar extends Component
 
     public function render()
     {
-        return view('livewire.navbar');
+        return view('livewire.components.controls.navbar');
     }
 }

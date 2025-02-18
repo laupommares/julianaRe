@@ -11,7 +11,7 @@
     </head>
     <body class="bg-white">
 
-        <livewire:navbar/>
+        <livewire:components.controls.navbar/>
         <main>
             @yield('content') 
         </main>

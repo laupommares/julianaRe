@@ -22,9 +22,9 @@
             </form>
         </div>
         <div class="bg-medium-gray absolute right-0 top-0 h-full flex items-center w-1/2 pl-16">
-            <div class="text-white flex flex-col gap-6">
+            <div class="text-white flex flex-col gap-6 w-full max-w-[580px]">
                 <p class="text-xl font-flex">Atiendo de forma presencial y online. <br> ¡Elige la opción que mejor se adapte a vos!</p>
-                <iframe class="rounded-md" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.2500803188964!2d-60.01779362316904!3d-34.9001731728495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bea516660933e9%3A0x2ea0a3e1f14e57ad!2sJuliana%20Re!5e0!3m2!1ses!2sar!4v1739842978510!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe class="rounded-md h-[450px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.2500803188964!2d-60.01779362316904!3d-34.9001731728495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bea516660933e9%3A0x2ea0a3e1f14e57ad!2sJuliana%20Re!5e0!3m2!1ses!2sar!4v1739842978510!5m2!1ses!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <div class="flex flex-col gap-2">
                     <a href="https://wa.me/5492346483632" target="_blank" class="flex gap-2">
                         <img src="whatsapp-nutrucionista-juliana-re.png" alt="WhatsApp Juliana Re nutricionista" class="whatsapp-icon">

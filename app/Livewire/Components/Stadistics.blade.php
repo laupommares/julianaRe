@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Components;
 
 use Livewire\Component;
 
@@ -8,6 +8,6 @@ class Stadistics extends Component
 {
     public function render()
     {
-        return view('livewire.stadistics');
+        return view('livewire.components.stadistics');
     }
 }

@@ -17,8 +17,8 @@
             </div>    
         </div>
     </header>
-    <livewire:stadistics/>
-    <livewire:google-reviews/>
+    <livewire:components.stadistics/>
+    <livewire:components.google-reviews/>
     <livewire:components.about-component type="short"/>
     <livewire:components.blog-component/>
     <livewire:components.recipes-component/>

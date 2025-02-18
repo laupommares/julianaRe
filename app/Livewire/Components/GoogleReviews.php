@@ -1,5 +1,5 @@
 <?php
-namespace App\Livewire;
+namespace App\Livewire\Components;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Http;
@@ -43,6 +43,6 @@ class GoogleReviews extends Component
 
     public function render()
     {
-        return view('livewire.google-reviews');
+        return view('livewire.components.google-reviews');
     }
 }

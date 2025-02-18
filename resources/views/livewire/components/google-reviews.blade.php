@@ -19,31 +19,32 @@ x-data="{ currentPage: 0, reviewsPerPage: window.innerWidth < 1024 ? 1 : 2 }" x-
         <div class="pb-8 w-full flex items-center justify-center">
             <h1 class="font-slab text-4xl">Valoraciones y Testimonios de mis pacientes</h1>
         </div>
-        <div class="container mx-auto">
-            <div class="flex flex-basis mb-8 gap-3">
-                <img class="h-20 w-20 rounded-full" src="/juli.png" alt="">
-                <div class="flex flex-col gap-2">
-                    <p class="pt-1.5 font-semibold">Juliana Re</p>
-                    <div class="flex gap-2">
-                        <p class="font-semibold">{{ number_format($averageRating, 1) }} / 5</p>
-                        <!-- Mostrar las estrellas correspondientes a la calificación promedio -->
-                        <div class="flex space-x-1">
-                            @for ($i = 0; $i < floor($averageRating); $i++) 
-                                <svg class="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.191c.969 0 1.371 1.24.588 1.81l-3.395 2.472a1 1 0 00-.364 1.118l1.286 3.966c.3.922-.755 1.688-1.54 1.118l-3.394-2.472a1 1 0 00-1.176 0L5.51 17.68c-.784.57-1.84-.196-1.54-1.118l1.286-3.966a1 1 0 00-.364-1.118L1.497 9.394c-.783-.57-.38-1.81.588-1.81h4.191a1 1 0 00.95-.69l1.286-3.967z"/>
-                                </svg>
-                            @endfor
+        <div class="flex flex-basis mb-8 gap-3">
+            <img class="h-20 w-20 rounded-full" src="/juli.png" alt="">
+            <div class="flex flex-col gap-2">
+                <p class="pt-1.5 font-semibold">Juliana Re</p>
+                <div class="flex gap-2">
+                    <p class="font-semibold">{{ number_format($averageRating, 1) }} / 5</p>
+                    <!-- Mostrar las estrellas correspondientes a la calificación promedio -->
+                    <div class="flex space-x-1">
+                        @for ($i = 0; $i < floor($averageRating); $i++) 
+                            <svg class="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.191c.969 0 1.371 1.24.588 1.81l-3.395 2.472a1 1 0 00-.364 1.118l1.286 3.966c.3.922-.755 1.688-1.54 1.118l-3.394-2.472a1 1 0 00-1.176 0L5.51 17.68c-.784.57-1.84-.196-1.54-1.118l1.286-3.966a1 1 0 00-.364-1.118L1.497 9.394c-.783-.57-.38-1.81.588-1.81h4.191a1 1 0 00.95-.69l1.286-3.967z"/>
+                            </svg>
+                        @endfor
 
-                            <!-- Agregar la estrella vacía si el rating no es un número entero -->
-                            @if ($averageRating - floor($averageRating) >= 0.5)
-                                <svg class="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.191c.969 0 1.371 1.24.588 1.81l-3.395 2.472a1 1 0 00-.364 1.118l1.286 3.966c.3.922-.755 1.688-1.54 1.118l-3.394-2.472a1 1 0 00-1.176 0L5.51 17.68c-.784.57-1.84-.196-1.54-1.118l1.286-3.966a1 1 0 00-.364-1.118L1.497 9.394c-.783-.57-.38-1.81.588-1.81h4.191a1 1 0 00.95-.69l1.286-3.967z"/>
-                                </svg>
-                            @endif
-                        </div>
+                        <!-- Agregar la estrella vacía si el rating no es un número entero -->
+                        @if ($averageRating - floor($averageRating) >= 0.5)
+                            <svg class="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.191c.969 0 1.371 1.24.588 1.81l-3.395 2.472a1 1 0 00-.364 1.118l1.286 3.966c.3.922-.755 1.688-1.54 1.118l-3.394-2.472a1 1 0 00-1.176 0L5.51 17.68c-.784.57-1.84-.196-1.54-1.118l1.286-3.966a1 1 0 00-.364-1.118L1.497 9.394c-.783-.57-.38-1.81.588-1.81h4.191a1 1 0 00.95-.69l1.286-3.967z"/>
+                            </svg>
+                        @endif
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="flex justify-end px-2 py-3">
+            <a href="" class="font-bold underline">Ver todas las reseñas</a>
         </div>
         <div class="flex flex-row gap-8 mb-16 justify-between">
             @foreach ($orderedReviews as $index => $review)

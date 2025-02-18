@@ -43,7 +43,7 @@
                             que considero fundamentales para ayudarte a lograr un estilo de vida más saludable y equilibrado. 
                             ¡Todo lo que necesitas para sentirte mejor!
                         </p>
-                        <a href="/blog">Accedé al Blog con todos los artículos</a>
+                        <a href="/blog" class="font-bold underline">Accedé al Blog con todos los artículos</a>
                     </div>
                 </div>
             </div>

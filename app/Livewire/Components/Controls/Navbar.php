@@ -16,7 +16,6 @@ class Navbar extends Component
         $this->isAuthenticated = Auth::check();
         // Definición de las opciones del menú
         $this->menuOptions = [
-            'Inicio' => './',
             'Blog' => '/blog',
             'Recetas' => '/recipes',
             'Turnos' => '/turnos',

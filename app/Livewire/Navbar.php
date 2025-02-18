@@ -21,7 +21,7 @@ class Navbar extends Component
             'Recetas' => '/recipes',
             'Turnos' => '/turnos',
             'Sobre mi' => '/about-me',
-            'Contactame' => '/contactame'
+            'Contactame' => '/contact'
         ];
     }
     public function updateAuthenticationStatus()

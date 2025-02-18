@@ -13,11 +13,11 @@
         ->values();
 @endphp
 
-<section class="bg-[#B3B3B3] bg-opacity-60 text-black" 
-         x-data="{ currentPage: 0, reviewsPerPage: 2 }">
-    <div class="mx-auto px-4 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px] py-16 ">
+<section class="bg-medium-gray bg-opacity-60 text-black" 
+x-data="{ currentPage: 0, reviewsPerPage: window.innerWidth < 1024 ? 1 : 2 }" x-init="window.addEventListener('resize', () => { reviewsPerPage = window.innerWidth < 1024 ? 1 : 2 })">
+    <div class="container py-16 text-dark">
         <div class="pb-8 w-full flex items-center justify-center">
-            <h1 class="font-serif text-4xl">Valoraciones y Testimonios de mis pacientes</h1>
+            <h1 class="font-slab text-4xl">Valoraciones y Testimonios de mis pacientes</h1>
         </div>
         <div class="container mx-auto">
             <div class="flex flex-basis mb-8 gap-3">

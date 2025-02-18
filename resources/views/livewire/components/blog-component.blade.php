@@ -1,9 +1,9 @@
 <div class="h-auto bg-blue flex items-center justify-center">
     <div class="bg-white my-4 w-[calc(100%-32px)]">
-        <div class="mx-auto px-4 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px] flex items-center justify-center">
+        <div class="container flex items-center justify-center">
             <div class="bg-white h-[746px] w-full relative flex flex-col text-dark my-16">
                 <div class="w-full flex justify-center">
-                    <h1 class="font-serif text-4xl text-center mb-16">Consejos y bienestar</h1>
+                    <h1 class="font-slab text-4xl text-center mb-16">Consejos y bienestar</h1>
                 </div>
                 <div class="flex flex-row gap-8">
                     <div class="w-full flex flex-col gap-8">

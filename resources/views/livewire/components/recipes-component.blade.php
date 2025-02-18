@@ -1,8 +1,8 @@
 <div class="h-[810px] bg-green flex items-center justify-center">
     <div class="bg-white h-[778px]"  style="width: calc(100% - 32px);">
-        <div class="mx-auto px-4 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px] flex items-center justify-center">
+        <div class="container flex items-center justify-center">
             <div class="w-full flex flex-col justify-center items-center my-10 text-dark gap-8">
-                <h1 class="font-serif text-4xl">Recetas</h1>
+                <h1 class="font-slab text-4xl">Recetas</h1>
                 <p class="text-base font-light leading-8 text-center">En esta sección encontrarás recetas fáciles, saludables y deliciosas, junto con prácticos tips de cocina para que disfrutes de una alimentación nutritiva y equilibrada en tu día a día. ¡Descubrí cómo preparar comidas que cuiden tu cuerpo sin perder sabor!</p>
                 <div class="grid grid-cols-3 gap-6">
                     <div class="mb-10 card card-compact w-[348px] h-[420px] shadow-xl">

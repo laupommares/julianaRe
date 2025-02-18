@@ -2,7 +2,7 @@
 @extends('livewire.layouts.app')
 @section('content')
     <header id="header" class="bg-cover bg-center h-[880px]" style="background-image: url('/header.png');">
-        <div class="relative mx-auto px-4 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px] flex justify-end h-full items-end">
+        <div class="relative container flex justify-end h-full items-end">
             <div class="mb-10 card card-compact max-w-[462px] shadow-xl bg-white absolute bottom-0">
                 <figure class="relative w-full p-4  ">
                     <img class="inset-0 w-full object-cover object-top h-[340px]" src="{{ asset('tunos.jpg') }}" alt="">
@@ -19,7 +19,8 @@
     </header>
     <livewire:stadistics/>
     <livewire:google-reviews/>
-    <livewire:components.blog-component/>
-    <livewire:components.recipes-component />
     <livewire:components.about-component type="short"/>
+    <livewire:components.blog-component/>
+    <livewire:components.recipes-component/>
+    <livewire:components.controls.form-contact>
 @endsection

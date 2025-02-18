@@ -1,8 +1,6 @@
-@extends('layouts.app')
+@extends('livewire.layouts.app')
 
 @section('content')
-    <div>
-        <h1>Bienvenido a la página principal</h1>
-        <p>Contenido específico de la página de inicio.</p>
-    </div>
+    
+        <livewire:components.controls.form-contact>
 @endsection

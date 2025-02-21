@@ -15,6 +15,7 @@ class RecipeFactory extends Factory
     {
         return [
             'name' => $this->faker->word(),
+            'slug' => fake()->slug,
             'description' => $this->faker->paragraph(),
             'ingredients' => $this->faker->sentence(),
             'instructions' => $this->faker->paragraph(),

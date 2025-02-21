@@ -25,6 +25,17 @@ class ShowResultsRecipes extends Component
             $this->results = Recipe::where('description', 'LIKE', "%{$searchText}%")->get();
         }
     }
+    public function getRecipes()
+    {
+    return Recipe::all()->map(function ($recipe) {
+        return [
+            'title' => $recipe->title,
+            'description' => Str::limit($recipe->excerpt, 100),
+            'image' => $recipe->image_url,
+            'link' => route('blog.show', ['slug' => $recipe->slug]) // URL correcta
+        ];
+    });
+    }
     public function loadAllRecipes()
     {
         $this->results = Recipe::all();

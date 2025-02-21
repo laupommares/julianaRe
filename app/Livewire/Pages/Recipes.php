@@ -11,6 +11,6 @@ class Recipes extends Component
     }
     public function render()
     {
-        return view('livewire.pages.recipes');
+        return view('livewire.pages.recipes')->layout('livewire.layouts.app');
     }
 }

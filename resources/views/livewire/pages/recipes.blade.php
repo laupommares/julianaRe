@@ -1,6 +1,3 @@
-
-@extends('livewire.layouts.app')
-@section('content')
 <div class=" bg-blue flex items-center justify-center">
     <div class="bg-white h-full w-[calc(100%-80px)]">
         <div class="container my-32 flex flex-col gap-8">
@@ -16,4 +13,3 @@
         </div>
     </div>
 </div>
-@endsection

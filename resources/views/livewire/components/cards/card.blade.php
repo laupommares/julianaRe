@@ -5,8 +5,10 @@
     <div class="flex flex-col text-dark bg-white rounded-b-xl gap-4 p-4">
         <h2 class="card-title">{{ $title }}</h2>
         <p class="text-base">{{ $description }}</p>
-        <a href="{{ $link }}">
-            <button class="bg-orange font-bold w-40 rounded-md h-12">Ver más</button>
+        <a href="{{ route('blog.show', ['slug' => $slug]) }}" wire:navigate>
+            <button class="bg-blue-500 text-white px-4 py-2 mt-4 rounded">
+                Leer más
+            </button>
         </a>
     </div>
 </div>

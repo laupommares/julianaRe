@@ -18,7 +18,6 @@ class Navbar extends Component
         $this->menuOptions = [
             'Blog' => '/blog',
             'Recetas' => '/recipes',
-            'Turnos' => '/turnos',
             'Sobre mi' => '/about-me',
             'Contactame' => '/contact'
         ];

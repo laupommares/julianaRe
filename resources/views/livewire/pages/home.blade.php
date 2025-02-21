@@ -1,6 +1,4 @@
-
-@extends('livewire.layouts.app')
-@section('content')
+<div>
     <header id="header" class="bg-cover bg-center h-[880px]" style="background-image: url('/header.png');">
         <div class="relative container flex justify-end h-full items-end">
             <div class="mb-10 card card-compact max-w-[462px] shadow-xl bg-white absolute bottom-0">
@@ -23,4 +21,4 @@
     <livewire:components.blog-component/>
     <livewire:components.recipes-component/>
     <livewire:components.controls.form-contact>
-@endsection
+</div>

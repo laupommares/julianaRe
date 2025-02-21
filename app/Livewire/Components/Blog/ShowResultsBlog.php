@@ -24,6 +24,18 @@ class ShowResultsBlog extends Component
             $this->results = Article::where('title', 'LIKE', "%{$searchText}%")->get();
         }
     }
+    public function getArticles()
+    {
+    return Article::all()->map(function ($article) {
+        return [
+            'title' => $article->title,
+            'description' => Str::limit($article->excerpt, 100),
+            'image' => $article->image_url,
+            'link' => route('blog.show', ['slug' => $article->slug]) // URL correcta
+        ];
+    });
+    }
+
 
     public function loadAllArticles()
     {

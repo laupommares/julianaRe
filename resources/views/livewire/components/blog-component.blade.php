@@ -15,6 +15,7 @@
                                     :title="$result->title"
                                     :description="$result->description"
                                     :link="$result->link"
+                                    :slug="$result->slug"
                                 />
                             </div>
                         @endforeach

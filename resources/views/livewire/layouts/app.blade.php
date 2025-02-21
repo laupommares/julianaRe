@@ -12,9 +12,11 @@
     <body class="bg-white">
 
         <livewire:components.controls.navbar/>
-        <main>
-            @yield('content') 
-        </main>
+
+        <div> {{-- Contenedor principal para Livewire --}}
+            {{ $slot }}
+        </div>
+    
 
     </body>
 </html>

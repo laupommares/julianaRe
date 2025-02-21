@@ -16,6 +16,6 @@ class Blog extends Component
 
     public function render()
     {
-        return view('livewire.pages.blog', ['articles' => $this->articles]);
+        return view('livewire.pages.blog', ['articles' => $this->articles])->layout('livewire.layouts.app');
     }
 }

@@ -11,6 +11,7 @@
                     :description="$result->description"
                     :link="$result->link"
                     :slug="$result->slug" 
+                    route="recipes.show"
                 />
             @endforeach
         </div>

@@ -16,6 +16,6 @@ Route::get('/contact', Contact::class)->name('livewire.pages.contact');
 Route::get('/blog', Blog::class)->name('livewire.pages.blog');
 Route::get('/recipes', Recipes::class)->name('livewire.pages.recipes');
 Route::get('/blog/{slug}', ShowArticle::class)->name('blog.show');
-
+Route::get('/recipes/{slug}', ShowRecipe::class)->name('recipes.show');
 
 Route::post('logout', [Login::class, 'logout'])->name('logout');

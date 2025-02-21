@@ -3,6 +3,8 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
+
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Recipe>
@@ -13,9 +15,11 @@ class RecipeFactory extends Factory
 
     public function definition()
     {
+        $title = $this->faker->word();
+
         return [
-            'name' => $this->faker->word(),
-            'slug' => fake()->slug,
+            'title' => $this->faker->word(),
+            'slug' => Str::slug($title),
             'description' => $this->faker->paragraph(),
             'ingredients' => $this->faker->sentence(),
             'instructions' => $this->faker->paragraph(),

@@ -15,7 +15,8 @@
                                     :title="$result->title"
                                     :description="$result->description"
                                     :link="$result->link"
-                                    :slug="$result->slug"
+                                    :slug="$result->slug" 
+                                    route="blog.show"
                                 />
                             </div>
                         @endforeach

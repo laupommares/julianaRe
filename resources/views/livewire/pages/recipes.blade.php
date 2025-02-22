@@ -7,7 +7,7 @@
                 </div>
                 <p class="leading-8 font-light text-base text-center text-dark">En esta sección, comparto algunas recetas, cosas que probé y te recomiendo, tips para cocinar y más. </p>
                
-                <livewire:components.controls.search type="recipes">
+                <livewire:components.search.search type="recipes">
 
             </div>
         </div>

@@ -8,7 +8,7 @@ use App\Models\Article;
 class ShowResultsBlog extends Component
 {
     public $results = [];
-
+    
     protected $listeners = ['searchUpdated' => 'filterResults'];
 
     public function mount()

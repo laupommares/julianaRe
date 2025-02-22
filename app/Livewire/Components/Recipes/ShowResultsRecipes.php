@@ -22,8 +22,10 @@ class ShowResultsRecipes extends Component
         if (empty($searchText)) {
             $this->loadAllRecipes();
         } else {
-            $this->results = Recipe::where('description', 'LIKE', "%{$searchText}%")->get();
-        }
+            $this->results = Recipe::where('title', 'LIKE', "%{$searchText}%")
+            ->orWhere('description', 'LIKE', "%{$searchText}%")
+            ->get();
+                }
     }
     public function getRecipes()
     {

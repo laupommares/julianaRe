@@ -6,9 +6,7 @@
         <h2 class="card-title">{{ $title }}</h2>
         <p class="text-base">{{ $description }}</p>
         <a href="{{ route($route, ['slug' => $slug]) }}" wire:navigate>
-            <button class="bg-orange text-dark px-4 py-2 mt-4 rounded w-full">
-                Leer más
-            </button>
+            <x-button size="md" color="orange"> Leer Más </x-button>
         </a>
     </div>
 </div>

@@ -1,6 +1,6 @@
 <div>
     @if (count($results) == 0)
-        <p class="text-center w-full mt-8">No hay resultados para tu búsqueda.</p>
+        <p class="text-center w-full mt-8 text-dark">No hay resultados para tu búsqueda.</p>
     @else
         <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
             @foreach ($results as $result)

@@ -21,7 +21,9 @@ class ShowResultsBlog extends Component
         if (empty($searchText)) {
             $this->loadAllArticles();
         } else {
-            $this->results = Article::where('title', 'LIKE', "%{$searchText}%")->get();
+            $this->results = Article::where('title', 'LIKE', "%{$searchText}%")
+                                    ->orWhere ('description', 'LIKE', "%{$searchText}%")
+                                    ->get();
         }
     }
     public function getArticles()

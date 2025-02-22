@@ -15,8 +15,6 @@
             </div>    
         </div>
     </header>
-    <x-button size="md" color="orange"> Botón Naranja </x-button>
-
 
     <livewire:components.stadistics/>
     <livewire:components.google-reviews/>

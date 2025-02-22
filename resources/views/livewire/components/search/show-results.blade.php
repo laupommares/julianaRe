@@ -12,7 +12,6 @@
             :link="route($routeName, ['slug' => $result->slug])"
             :slug="$result->slug"
             :route="$routeName" />
-        
             @endforeach
         </div>
     @endif

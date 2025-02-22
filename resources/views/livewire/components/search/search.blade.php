@@ -20,8 +20,15 @@
     </form>
 
     @if ($type === 'articles')
-        <livewire:components.blog.show-results-blog />
+        <livewire:components.search.show-results 
+        modelClass="App\Models\Article" 
+        routeName="blog.show" 
+        />
+
     @elseif ($type === 'recipes')
-        <livewire:components.recipes.show-results-recipes />
+        <livewire:components.search.show-results 
+        modelClass="App\Models\Recipe" 
+        routeName="recipes.show" 
+        />
     @endif
 </div>

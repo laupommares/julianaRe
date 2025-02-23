@@ -19,7 +19,8 @@ class Navbar extends Component
             'Blog' => '/blog',
             'Recetas' => '/recipes',
             'Sobre mi' => '/about-me',
-            'Contactame' => '/contact'
+            'Contactame' => '/contact',
+            'Dashboard' => '/dashboard'
         ];
     }
     public function updateAuthenticationStatus()

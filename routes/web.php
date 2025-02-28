@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Admin\CreateArticle;
 use App\Livewire\ArticleList;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Login;
@@ -18,6 +19,7 @@ Route::get('/blog', Blog::class)->name('livewire.pages.blog');
 Route::get('/recipes', Recipes::class)->name('livewire.pages.recipes');
 Route::get('/dashboard', Dashboard::class);
 Route::get('/dashboard/articles', ArticleList::class);
+Route::get('/dashboard/articles/create', CreateArticle::class);
 
 
 // Ruta para ver un artículo del blog

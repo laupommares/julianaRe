@@ -9,22 +9,25 @@
         @vite('resources/css/app.css')
         @vite('resources/js/app.js')
     </head>
-    <body class="bg-white">
+    <body>
+        <div class="relative flex flex-basis">
+            <div class="flex flex-col items-center w-60 bg-white h-screen shadow-xl z-10 absolute p-4 text-dark-gray container">
+                <img src="{{ asset('logo.png') }}" class="w-20 h-20 my-10" alt="">
 
-        <div class="w-full p-4 text-dark container">
-            <ul class="flex gap-8">
-                <li>
-                    <a href="/dashboard">Admin Dashboard</a>
-                </li>
-                <li>
-                    <a href="/dashboard/articles">Artículos</a>
-                </li>
-            </ul>
+                <ul class="flex flex-col items-center gap-2 w-full">
+                    <img src="" alt="">
+                    <li class="hover:bg-white px-4 py-2 rounded-md w-full">
+                        <a href="/dashboard">Admin Dashboard</a>
+                    </li>
+                    <li class="hover:bg-white focus:bg-white px-4 py-2 rounded-md w-full">
+                        <a href="/dashboard/articles">Artículos</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="absolute right-0 w-[calc(100%-240px)] bg-[#FAFAFA]">
+                {{ $slot }}
+            </div>
         </div>
-        <div> {{-- Contenedor principal para Livewire --}}
-            {{ $slot }}
-        </div>
-    
 
     </body>
 </html>

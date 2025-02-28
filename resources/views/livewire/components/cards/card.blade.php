@@ -4,7 +4,7 @@
     </figure>
     <div class="flex flex-col text-dark bg-white rounded-b-xl gap-4 p-4">
         <h2 class="card-title">{{ $title }}</h2>
-        <p class="text-base">{{ $description }}</p>
+        <p class="text-base h-12">{{ $description }}</p>
         <a href="{{ route($route, ['slug' => $slug]) }}" wire:navigate>
             <x-button size="md" color="orange"> Leer Más </x-button>
         </a>

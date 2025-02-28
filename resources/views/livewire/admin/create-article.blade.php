@@ -10,22 +10,22 @@
         <h1 class="text-2xl font-slab">Crear artículo</h1>
     </div>
 
-    <form wire:submit.prevent="save" class="space-y-4">
+    <form wire:submit="save" class="space-y-4">
         <!-- Título -->
         <div>
             <label for="title" class="block text-sm font-medium text-dark">Título</label>
-            <input type="text" id="title" wire:model="title" wire:keyup="generateSlug"
+            <input type="text" id="title" wire:model="title"
                 class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue focus:border-blue">
             @error('title') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         </div>
 
         <!-- Slug -->
-        <div>
+{{--         <div>
             <label for="slug" class="block text-sm font-medium text-dark">Slug</label>
             <input type="text" id="slug" wire:model="slug"
                 class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue focus:border-blue">
             @error('slug') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
-        </div>
+        </div> --}}
 
         <!-- Descripción -->
         <div>
@@ -39,7 +39,7 @@
         <!-- Contenido -->
         <div>
             <label for="content" class="block text-sm font-medium text-dark">Contenido</label>
-            <textarea id="content" wire:model="content"
+            <textarea id="content" wire:model="content" wire:keyup="generateSlug"
                 class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue focus:border-blue"
                 rows="4"></textarea>
             @error('content') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror

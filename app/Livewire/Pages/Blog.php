@@ -6,6 +6,7 @@ use Livewire\Component;
 
 class Blog extends Component
 {
+    public $isPreview=false;
     public $articles;
 
     public function mount()

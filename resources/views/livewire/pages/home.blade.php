@@ -19,7 +19,7 @@
     <livewire:components.stadistics/>
     <livewire:components.google-reviews/>
     <livewire:components.about-component type="short"/>
-    <livewire:components.blog-component/>
-    <livewire:components.recipes-component/>
+    <livewire:pages.blog isPreview=true/>
+    <livewire:pages.recipes isPreview="true"/>
     <livewire:components.controls.form-contact>
 </div>

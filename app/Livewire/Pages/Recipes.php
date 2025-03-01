@@ -6,6 +6,9 @@ use Livewire\Component;
 
 class Recipes extends Component
 {
+
+    public $isPreview = false; // Define si es la versión reducida o completa
+
     public function mount (){
         Recipes::all();
     }

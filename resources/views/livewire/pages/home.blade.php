@@ -18,7 +18,7 @@
 
     <livewire:components.stadistics/>
     <livewire:components.google-reviews/>
-    <livewire:components.about-component type="short"/>
+    <livewire:pages.about-me isPreview=true/>
     <livewire:pages.blog isPreview=true/>
     <livewire:pages.recipes isPreview="true"/>
     <livewire:components.controls.form-contact>

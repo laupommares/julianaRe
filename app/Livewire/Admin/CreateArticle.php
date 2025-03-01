@@ -21,6 +21,9 @@ class CreateArticle extends Component
     public $slug ='';
 
     #[Validate('required')]
+    public $description = ''; 
+
+    #[Validate('required')]
     public $content = ''; 
 
 

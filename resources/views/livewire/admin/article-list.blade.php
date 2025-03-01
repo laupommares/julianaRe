@@ -18,9 +18,9 @@
                         <div class="font-light line-clamp-3 text-sm">{{$article->content}}</div>
                     </td>
                     <td class="flex flex-col gap-2 px-4 justify-center">
-                        <button class="bg-blue hover:bg-blue/70 text-white p-2 rounded-md"
-                        wire:click="delete({{$article->id}})"
-                        wire:confirm="¿Estás segura que queres borrar este artículo?">Editar</button>
+                        <a class="bg-blue hover:bg-blue/70 text-white p-2 rounded-md"
+                        href="/dashboard/articles/{{$article->id}}/edit"
+                        wire:navigate>Editar</a>
                         <button class="bg-orange hover:bg-orange/70 text-dark p-2 rounded-md"
                         wire:click="delete({{$article->id}})"
                         wire:confirm="¿Estás segura que queres borrar este artículo?">Borrar</button>

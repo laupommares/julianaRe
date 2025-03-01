@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Admin;
 
 use App\Models\Article;
 use Livewire\Component;
@@ -12,6 +12,6 @@ class ArticleList extends Component
     }
     public function render()
     {
-        return view('livewire.article-list', ['articles'=> Article::all()],)->layout('livewire.layouts.admin');
+        return view('livewire.admin.article-list', ['articles'=> Article::all()],)->layout('livewire.layouts.admin');
     }
 }

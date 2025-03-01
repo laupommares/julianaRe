@@ -1,4 +1,4 @@
-<div class="container py-16 {{ $type === 'long' ? 'h-screen' : 'h-fit' }}">
+<div class="container py-16 {{ $type === 'long' ? 'h-full' : 'h-fit' }}">
     <div class="flex {{ $type === 'long' ? 'flex-wrap' : '' }} gap-8">
         <div class=" text-dark flex flex-col gap-8">
             <h2 class="font-slab text-orange text-xl">Hola, ¿Cómo estás?</h2>

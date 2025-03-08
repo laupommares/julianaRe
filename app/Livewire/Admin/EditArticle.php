@@ -34,6 +34,7 @@ class EditArticle extends Component
         $this->title = $article->title;
         $this->description = $article->description;
         $this->content = $article->content;
+        $this->slug = $article->slug;
 
         $this->article = $article;
     }
@@ -48,13 +49,16 @@ class EditArticle extends Component
         // Actualizar el artículo con el título, descripción, contenido y la imagen (si se ha subido)
         $this->article->update([
             'title' => $this->title,
+            'slug' => $this->slug, // Agregar esta línea
             'description' => $this->description,
             'content' => $this->content,
             'image' => $imagePath,
         ]);
     
-        session()->flash('message', 'Artículo actualizado con éxito.');
-    
+        if (!$this->article) {
+            session()->flash('message', 'Error: No se encontró el artículo.');
+            return;
+        }    
         // Redirigir a la página de artículos después de guardar
         return redirect()->route('dashboard.articles');
     }

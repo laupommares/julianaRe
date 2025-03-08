@@ -44,7 +44,7 @@ x-data="{ currentPage: 0, reviewsPerPage: window.innerWidth < 1024 ? 1 : 2 }" x-
             </div>
         </div>
         <div class="flex justify-end px-2 py-3">
-            <a href="" class="font-bold underline">Ver todas las reseñas</a>
+            <a href="https://goo.su/kUXBz9t" class="font-bold underline">Ver todas las reseñas</a>
         </div>
         <div class="flex flex-row gap-8 mb-16 justify-between">
             @foreach ($orderedReviews as $index => $review)

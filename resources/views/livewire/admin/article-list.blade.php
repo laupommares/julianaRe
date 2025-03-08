@@ -1,4 +1,4 @@
-<div class="mx-24 w-1/2 mb-4 text-dark mt-20 h-screen">
+<div class="mx-24 w-1/2 mb-4 text-dark mt-20 h-full">
     <div class="my-8">
         <a href="/dashboard/articles/create"
         class="p-4 rounded-sm bg-blue text-white hover:bg-blue/70"
@@ -15,7 +15,7 @@
                 <tr wire:key="{{$article->id}}" class="flex text-dark bg-white shadow-xl rounded-lg pb-2">
                     <td class="px-6 py-3">
                         <div class="pb-2">{{$article->title}}</div>
-                        <div class="font-light line-clamp-3 text-sm">{{$article->content}}</div>
+                        <div class="font-light line-clamp-3 text-sm">{{$article->description}}</div>
                     </td>
                     <td class="flex flex-col gap-2 px-4 justify-center">
                         <a class="bg-blue hover:bg-blue/70 text-white p-2 rounded-md"

@@ -15,6 +15,11 @@
                     <input type="password" id="login-password" class="border rounded w-full px-3 py-2 text-dark-gray border-blue bg-white placeholder:text-sm placeholder:text-dark-gray/70" placeholder="Ingresá tu contraseña" wire:model="password"  required>
                 </div>
                 <button type="submit" class="w-full bg-blue text-white hover:bg-blue/80 rounded px-4 my-2 py-2 font-slab text-xl">Iniciar Sesión</button>
+                @if (session()->has('error'))
+                    <div class="p-4 mb-4 text-dark bg-green-100 rounded">
+                        {{ session('error') }}
+                    </div>
+                @endif
             </form>
             <p class="text-dark">¿Todavía no te registraste? Hacé clic <a href="#" @click.prevent="$dispatch('close-login-and-open-register')" class="font-bold ">acá</a> para registrar tu cuenta.</p>
         </div>

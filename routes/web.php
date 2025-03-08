@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Livewire\Login;
+use App\Livewire\Components\Controls\Login;
 use App\Livewire\Pages\Home;
 use App\Livewire\Pages\AboutMe;
 use App\Livewire\Pages\Contact;
@@ -20,7 +20,7 @@ Route::get('/contact', Contact::class)->name('livewire.pages.contact');
 Route::get('/blog', Blog::class)->name('livewire.pages.blog');
 Route::get('/recipes', Recipes::class)->name('livewire.pages.recipes');
 Route::get('/dashboard', Dashboard::class)->name('livewire.admin.dashboard');
-Route::get('/dashboard/articles', ArticleList::class);
+Route::get('/dashboard/articles', ArticleList::class)->name('dashboard.articles');
 Route::get('/dashboard/articles/create', CreateArticle::class);
 Route::get('/dashboard/articles/{article}/edit' , EditArticle::class);
 

@@ -23,14 +23,13 @@ class Login extends Component
     }
     public function login()
     {
-        $this->validate();
-    
+        $errores=$this->validate();
         if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
             session()->regenerate(); // Regenerar la sesión para mayor seguridad
             
             $this->isAuthenticated = true; // ✅ ACTUALIZAR el estado de autenticación
             
-            return redirect()->route('pages.home'); 
+            return redirect()->route('livewire.pages.home'); 
         }
     
         session()->flash('error', 'Las credenciales no son correctas.');

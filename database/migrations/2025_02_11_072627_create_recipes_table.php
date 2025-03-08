@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('recipes', function (Blueprint $table) {
             $table->id();
+            $table->string('image');      // Imagen asociada
             $table->string('slug')->unique();
             $table->string('title');  // Nombre de la receta
             $table->text('description');  // Descripción de la receta

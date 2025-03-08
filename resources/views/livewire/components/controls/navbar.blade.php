@@ -23,6 +23,7 @@
                         notification_important
                     </span>
                 </button>   
+                <div class="relative">
                     <!-- Botón de usuario con desplegable -->
                     <button @click="isOpen = !isOpen" type="button" class="relative h-12 w-12 m-2 inline-flex rounded-full bg-green-dark text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-green-dark" aria-expanded="false" aria-haspopup="true">
                         <img class="h-12 w-12 rounded-full" src="/juli.png" alt=""> <!-- Aquí puedes colocar la foto del usuario -->
@@ -32,7 +33,7 @@
                     <div x-show="isOpen" @click.away="isOpen = false" class="absolute right-0 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <div class="py-1">
                             <!-- Opción de Perfil -->
-                            <button @click="$dispatch('open-user-profile-modal')"  class="block px-4 py-2 text-sm text-green-dark hover:bg-gray-100">Perfil</button>
+                            <button @click="$dispatch('open-user-profile-modal')"  class="block text-start w-full px-4 py-2 text-sm text-green-dark hover:bg-gray-100">Perfil</button>
                             <!-- Opción de Cerrar sesión -->
                             <form method="POST" action="{{ route('logout') }}" class="block px-4 py-2 text-sm text-green-dark hover:bg-gray-100">
                                 @csrf
@@ -40,6 +41,7 @@
                             </form>
                         </div>
                     </div>
+                </div>
                 @else
                     <!-- Mostrar el botón de inicio de sesión/registro cuando no está autenticado -->
                     <li type="button" @click="$dispatch('open-login-modal')" class="flex text-sm font-raleway items-center font-semibold cursor-pointer">

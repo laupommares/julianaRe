@@ -18,6 +18,7 @@
 
     <livewire:components.stadistics/>
     <livewire:components.google-reviews/>
+    <livewire:components.programs/>
     <livewire:pages.blog isPreview=true/>
     <livewire:pages.recipes isPreview="true"/>
     <livewire:pages.about-me isPreview=true/>

@@ -12,7 +12,7 @@
         </thead>
         <tbody class="flex flex-col gap-2">
             @foreach ($articles as $article)
-                <tr wire:key="{{$article->id}}" class="flex text-dark bg-white shadow-xl rounded-lg pb-2">
+                <tr wire:key="{{$article->id}}" class="flex text-dark bg-white shadow-xl rounded-lg pb-2 justify-between">
                     <td class="px-6 py-3">
                         <div class="pb-2">{{$article->title}}</div>
                         <div class="font-light line-clamp-3 text-sm">{{$article->description}}</div>

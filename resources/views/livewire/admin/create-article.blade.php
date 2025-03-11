@@ -14,7 +14,7 @@
         <!-- Título -->
         <div>
             <label for="title" class="block text-sm font-medium text-dark">Título</label>
-            <input type="text" id="title" wire:model="title"
+            <input type="text" id="title" wire:model="form.title"
                 class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue focus:border-blue">
             @error('title') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         </div>
@@ -30,7 +30,7 @@
         <!-- Descripción -->
         <div>
             <label for="description" class="block text-sm font-medium text-dark">Descripción</label>
-            <textarea id="description" wire:model="description"
+            <textarea id="description" wire:model="form.description"
                 class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue focus:border-blue"
                 rows="2"></textarea>
             @error('description') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
@@ -39,7 +39,7 @@
         <!-- Contenido -->
         <div>
             <label for="content" class="block text-sm font-medium text-dark">Contenido</label>
-            <textarea id="content" wire:model="content" wire:keyup="generateSlug"
+            <textarea id="content" wire:model="form.content" wire:keyup="generateSlug"
                 class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue focus:border-blue"
                 rows="4"></textarea>
             @error('content') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror

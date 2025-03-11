@@ -14,7 +14,7 @@
         <!-- Título -->
         <div>
             <label for="title" class="block text-sm font-medium text-dark">Título</label>
-            <input type="text" id="title" wire:model="title"
+            <input type="text" id="title" wire:model="form.title"
                 class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue focus:border-blue">
             @error('title') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         </div>
@@ -22,7 +22,7 @@
         <!-- Descripción -->
         <div>
             <label for="description" class="block text-sm font-medium text-dark">Descripción</label>
-            <textarea id="description" wire:model="description"
+            <textarea id="description" wire:model="form.description"
                 class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue focus:border-blue"
                 rows="2"></textarea>
             @error('description') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
@@ -31,7 +31,7 @@
         <!-- Contenido -->
         <div>
             <label for="content" class="block text-sm font-medium text-dark">Contenido</label>
-            <textarea id="content" wire:model="content" wire:keyup="generateSlug"
+            <textarea id="content" wire:model="form.content" wire:keyup="generateSlug"
                 class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue focus:border-blue"
                 rows="4"></textarea>
             @error('content') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
@@ -41,9 +41,13 @@
         <div>
             <label for="image" class="block text-sm font-medium text-dark">Imagen (opcional)</label>
             <input type="file" id="image" wire:model="image" class="block w-full text-dark pt-1">
+
             @if ($image)
-                <img src="{{ $image->temporaryUrl() }}" class="mt-2 h-20 w-20 rounded">
-            @endif
+            <img src="{{ $image->temporaryUrl() }}" class="mt-2 h-20 w-20 rounded">
+        @elseif ($form->article && $form->article->image)
+            <img src="{{ Storage::url($form->article->image) }}" class="mt-2 h-20 w-20 rounded">
+        @endif
+        
             @error('image') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         </div>
 

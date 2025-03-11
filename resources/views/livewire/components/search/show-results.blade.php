@@ -6,7 +6,7 @@
             @foreach ($results as $result)
             <livewire:components.cards.card 
             :key="$result->id"
-            :image="$result->image"
+            :image="Storage::url($result->image)" 
             :title="$result->title"
             :description="Str::limit($result->description, 100)"
             :link="route($routeName, ['slug' => $result->slug])"

@@ -2,76 +2,52 @@
 
 namespace App\Livewire\Admin;
 
+use App\Livewire\Forms\PostForm;
 use Livewire\WithFileUploads;
-use Livewire\Attributes\Validate;
 use Livewire\Component;
 use App\Models\Article;
 use Illuminate\Support\Str;
-use Livewire\Volt\Compilers\Mount;
 
 class EditArticle extends Component
 {
+    
     use WithFileUploads;
 
-    public ?Article $article;
-
-    #[Validate('required')]
-    public $title = '';
-
-    #[Validate('required')]
-    public $slug ='';
-
-    #[Validate('required')]
-    public $description = ''; 
-
-    #[Validate('required')]
-    public $content = ''; 
-
-
     public $image;
+    public PostForm $form;
 
-    public function mount(Article $article){
-        $this->title = $article->title;
-        $this->description = $article->description;
-        $this->content = $article->content;
-        $this->slug = $article->slug;
-
-        $this->article = $article;
+    public function mount(Article $article)
+    {
+        $this->form = new PostForm($this, 'form');
+        $this->form->setArticle($article);
     }
-
+    
     public function save()
     {
-        $this->validate();
-    
-        // Si se carga una nueva imagen, guardarla y obtener la ruta
-        $imagePath = $this->image ? $this->image->store('articles', 'public') : $this->article->image;
-    
-        // Actualizar el artículo con el título, descripción, contenido y la imagen (si se ha subido)
-        $this->article->update([
-            'title' => $this->title,
-            'slug' => $this->slug, // Agregar esta línea
-            'description' => $this->description,
-            'content' => $this->content,
-            'image' => $imagePath,
-        ]);
-    
-        if (!$this->article) {
+        if (!$this->form->article) {
             session()->flash('message', 'Error: No se encontró el artículo.');
             return;
-        }    
-        // Redirigir a la página de artículos después de guardar
+        }
+    
+        // Asegurar que la imagen siempre sea un archivo subido
+        if ($this->image instanceof \Illuminate\Http\UploadedFile) {
+            $this->form->image = $this->image;
+        }
+    
+        $this->form->update();
+    
         return redirect()->route('dashboard.articles');
     }
     
     public function generateSlug()
     {
-        if (!$this->content) {
+        if (!$this->form->content) {
             $this->slug = '';
             return;
         }
 
         // Tomar las primeras 6 palabras del contenido
-        $words = Str::of($this->content)->words(6, '');
+        $words = Str::of($this->form->content)->words(6, '');
         $baseSlug = Str::slug($words);
         $slug = $baseSlug;
         $count = 1;

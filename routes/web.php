@@ -10,6 +10,7 @@ use App\Livewire\Pages\Recipes;
 use App\Livewire\Components\Search\ShowDetail;
 use App\Livewire\Admin\Dashboard;
 use App\Livewire\Admin\ArticleList;
+use App\Livewire\Admin\RecipeList;
 use App\Livewire\Admin\CreateArticle;
 use App\Livewire\Admin\EditArticle;
 
@@ -23,6 +24,7 @@ Route::get('/dashboard', Dashboard::class)->name('livewire.admin.dashboard');
 Route::get('/dashboard/articles', ArticleList::class)->name('dashboard.articles');
 Route::get('/dashboard/articles/create', CreateArticle::class);
 Route::get('/dashboard/articles/{article}/edit' , EditArticle::class);
+Route::get('/dashboard/recipes', RecipeList::class)->name('dashboard.recipes');
 
 
 // Ruta para ver un artículo del blog

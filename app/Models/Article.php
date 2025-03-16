@@ -10,6 +10,11 @@ class Article extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title', 'slug', 'description', 'content', 'image',
+        'title', 'slug', 'description', 'content', 'image', 'published', 'notifications'
+    ];
+
+    protected $casts = [
+        'published' => 'boolean',
+        'notifications' => 'array',
     ];
 }

@@ -55,9 +55,56 @@
             @error('image') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         </div>
 
+        <div class="mb-3 text-dark">
+            <label class="flex items-center">
+                <input type="checkbox" name="published"
+                wire:model.boolean="form.published"
+                class="mr-2">
+                Publicar
+            </label>
+        </div>
+        <div class="mb-3 text-dark">
+            <div>
+                <div class="mb-2 font-semibold">Opciones de notificación</div>
+                <div class="flex gap-6 mb-3">
+                    <label class="flex items-center">
+                        <input type="radio" value="true" class="mr-2"
+                        wire:model.boolean="form.allowNotifications">
+                        Si
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" value="false" class="mr-2"
+                        wire:model.boolean="form.allowNotifications">
+                        No
+                    </label>
+                </div>
+                <div x-show="$wire.form.allowNotifications">
+                    <label class="flex items-center">
+                        <input type="checkbox" value="email" class="mr-2"
+                        wire:model="form.notifications">
+                        Email
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" value="sms" class="mr-2"
+                        wire:model="form.notifications">
+                        SMS
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" value="push" class="mr-2"
+                        wire:model="form.notifications">
+                        Push
+                    </label>
+                </div>
+            </div>
+        </div>
+
         <!-- Botón -->
-        <button type="submit"
-            class="w-full bg-blue text-white py-2 rounded-md shadow hover:bg-blue/70 transition">
+        <button 
+            class="w-full bg-blue text-white py-2 rounded-md shadow transition disabled:opacity-75 disabled:bg-blue/60 " 
+            type="submit"
+            wire:dirty.class="hover:bg-blue/70"
+            wire:dirty.remove.attr="disabled"
+            disabled>
             Guardar Artículo
         </button>
     </form>

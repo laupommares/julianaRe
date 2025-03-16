@@ -26,6 +26,10 @@ class PostForm extends Form
     public $image;
     public $imagePath; // Para la imagen guardada
 
+    public $published = false;
+    public $notifications = [];
+    public $allowNotifications = false;
+
     public function setArticle(Article $article){
         $this->article = $article;
     
@@ -33,11 +37,20 @@ class PostForm extends Form
         $this->description = $article->description;
         $this->content = $article->content;
         $this->slug = $article->slug;
+        $this->published = $article->published;
+        $this->notifications = $article->notifications ?? [];
+
+        $this-> allowNotifications = count($this->notifications) > 0;
+
     }
     
     public function store()
     {
         $this->validate();
+
+        if(!$this->allowNotifications){
+            $this->notifications =[];
+        }
 
         // Generar slug si no se proporcionó
         if (!$this->slug) {
@@ -52,6 +65,8 @@ class PostForm extends Form
             'description' => $this->description,
             'content' => $this->content,
             'image'=> $imagePath, // Guarda la ruta de la imagen existente
+            'published' => $this->published,
+            'notifications' => $this->notifications,
         ]));
 
         session()->flash('message', 'Artículo creado con éxito.');
@@ -80,6 +95,10 @@ class PostForm extends Form
     }
     public function update() {
         $this->validate();
+
+        if(!$this->allowNotifications){
+            $this->notifications =[];
+        }
         
         // Si el usuario subió una nueva imagen, la guardamos
         if ($this->image instanceof \Illuminate\Http\UploadedFile) {
@@ -93,6 +112,8 @@ class PostForm extends Form
             'description' => $this->description,
             'content' => $this->content,
             'image' => $imagePath,
+            'published' => $this->published,
+            'notifications' => $this->notifications,
         ]);
     
         session()->flash('message', 'Artículo actualizado con éxito.');

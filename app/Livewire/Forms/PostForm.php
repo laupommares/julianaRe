@@ -5,6 +5,7 @@ namespace App\Livewire\Forms;
 use Livewire\Attributes\Validate;
 use Livewire\Form;
 use App\Models\Article;
+use Illuminate\Support\Str;
 
 class PostForm extends Form
 {
@@ -34,26 +35,52 @@ class PostForm extends Form
         $this->slug = $article->slug;
     }
     
-
     public function store()
     {
         $this->validate();
-            // Asignar la ruta de la imagen antes de usarla
+
+        // Generar slug si no se proporcionó
+        if (!$this->slug) {
+            $this->generateSlug();
+        }
+
         $imagePath = $this->image ? $this->image->store('articles', 'public') : null;
 
-        Article::create($this->only([
+        Article::create(([
             'title' => $this->title,
+            'slug' => $this->slug, // Asegurar que se guarde el slug
             'description' => $this->description,
             'content' => $this->content,
-            $this->imagePath = $article->image, // Guarda la ruta de la imagen existente
+            'image'=> $imagePath, // Guarda la ruta de la imagen existente
         ]));
 
         session()->flash('message', 'Artículo creado con éxito.');
 
     }
+
+    public function generateSlug()
+    {
+        if (!$this->title) {
+            $this->slug = '';
+            return;
+        }
+
+        // Generar un slug basado en el título
+        $baseSlug = Str::slug($this->title);
+        $slug = $baseSlug;
+        $count = 1;
+
+        // Asegurar que el slug sea único
+        while (Article::where('slug', $slug)->exists()) {
+            $slug = $baseSlug . '-' . $count;
+            $count++;
+        }
+
+        $this->slug = $slug;
+    }
     public function update() {
         $this->validate();
-    
+        
         // Si el usuario subió una nueva imagen, la guardamos
         if ($this->image instanceof \Illuminate\Http\UploadedFile) {
             $imagePath = $this->image->store('articles', 'public');

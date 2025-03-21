@@ -1,10 +1,11 @@
 <div class="mx-24 w-1/2 mb-4 text-dark mt-20 h-full">
-    <div class="my-8">
+    <div class="my-8 flex justify-between items-center">
         <a href="/dashboard/articles/create"
         class="p-4 rounded-sm bg-blue text-white hover:bg-blue/70"
         wire:navigate>Crear artículo</a>
+        <livewire:admin.published-count lazy>
     </div>
-    <table>
+    <table class="w-full">
         <thead class="">
             <tr>
                 <th class="px-6 py-8 font-slab text-2xl">Artículos: Consejos y bienestar</th>

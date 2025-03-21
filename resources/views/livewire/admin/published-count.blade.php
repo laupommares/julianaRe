@@ -1,0 +1,3 @@
+<div>
+    Publicaciones: {{$count}}
+</div>

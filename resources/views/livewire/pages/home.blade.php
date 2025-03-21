@@ -7,9 +7,9 @@
                 </figure>
                 <div class="card-body text-dark bg-white">
                     <h2 class="card-title">¡Comenzá hoy!</h2>
-                    <p class="text-base">Diseño planes pensados para acompañarte a lograr el bienestar que mereces, respetando tus necesidades únicas. ¡Este es el primer paso hacia tu mejor versión!</p>
+                    <p class="text-base">Diseño programas pensados para acompañarte a lograr el bienestar que mereces, respetando tus necesidades únicas. ¡Este es el primer paso hacia tu mejor versión!</p>
                     <div class="card-actions justify-end">
-                        <button class="text-dark w-[430px] h-12 font-semibold bg-green px-4 py-2 rounded-sm text-xl">Saca turno acá!</button>
+                        <button class="text-dark w-[430px] h-12 font-semibold bg-green px-4 py-2 rounded-sm text-xl">Conocer programas o sacar turno</button>
                     </div>
                 </div>
             </div>    
@@ -18,9 +18,9 @@
 
     <livewire:components.stadistics/>
     <livewire:components.google-reviews/>
-    <livewire:components.programs/>
     <livewire:pages.blog isPreview=true/>
     <livewire:pages.recipes isPreview="true"/>
     <livewire:pages.about-me isPreview=true/>
+    <livewire:components.programs/>
     <livewire:components.controls.form-contact>
 </div>

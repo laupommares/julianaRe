@@ -3,7 +3,15 @@
         <a href="/dashboard/articles/create"
         class="p-4 rounded-sm bg-blue text-white hover:bg-blue/70"
         wire:navigate>Crear artículo</a>
-        <livewire:admin.published-count lazy>
+        <div class="">
+            <button class="p-2 rounded-md bg-light-gray"
+            wire:click="showAll()">Mostrar todo</button>
+            <button class="p-2 rounded-md bg-light-gray"
+            wire:click="showPublished()">Artículos publicados (<livewire:admin.published-count placeholder-text="Cargando..." lazy>)</button>
+        </div>
+    </div>
+    <div class="mt-3">
+        {{$articles->links()}}
     </div>
     <table class="w-full">
         <thead class="">
@@ -30,4 +38,7 @@
             @endforeach
         </tbody>
     </table>
+    <div class="mt-3">
+        {{$articles->links()}}
+    </div>
 </div>

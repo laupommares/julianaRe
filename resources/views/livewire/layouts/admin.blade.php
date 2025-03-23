@@ -9,38 +9,38 @@
         @vite('resources/css/app.css')
         @vite('resources/js/app.js')
     </head>
-    <body class="">
-        <div class="flex flex-basis">
-            <div class="bg-[#F5F6F8] w-full h-full absolute">
-                <div class="flex flex-col items-center w-60 bg-white h-full shadow-xl z-10 absolute p-4 text-dark-gray container rounded-2xl">
-                    <div class="my-8">
-                        <img class="h-24 w-24 rounded-full mb-4" src="/juli.png" alt=""> <!-- Aquí puedes colocar la foto del usuario -->
-                        <h1>Juliana Re</h1>
-                    </div>
-                    <ul class="flex flex-col items-center gap-2 w-full">
-                        <li class="flex items-center gap-2 group hover:bg-medium-gray px-4 py-2 rounded-md w-full">
-                            <span class="material-symbols-outlined text-medium-gray text-2xl font-bold align-middle group-hover:text-white">dashboard</span>
-                            <a href="/dashboard" class="group-hover:text-white">Admin Dashboard</a>
-                        </li>
-                        <li class="flex items-center gap-2 group hover:bg-medium-gray px-4 py-2 rounded-md w-full">
-                            <span class="material-symbols-outlined text-medium-gray group-hover:text-white text-2xl font-bold align-middle">news</span>
-                            <a href="/dashboard/articles" class="group-hover:text-white">Artículos</a>
-                        </li>
-                        <li class="flex items-center gap-2 group hover:bg-medium-gray px-4 py-2 rounded-md w-full">
-                            <span class="material-symbols-outlined text-medium-gray group-hover:text-white text-2xl font-bold align-middle">grocery</span>
-                            <a href="/dashboard/recipes" class="group-hover:text-white">Recetas</a>
-                        </li>
-                    </ul>
-                    <div class="w-full bg-medium-gray h-[1px] my-8"></div>
-                    <ul class="flex flex-col items-center gap-2 w-full">
-                        <li class="flex items-center gap-2 group hover:bg-medium-gray px-4 py-2 rounded-md w-full">
-                            <span class="material-symbols-outlined text-medium-gray hover text-2xl font-bold align-middle group-hover:text-white">home</span>
-                            <a href="/" class="group-hover:text-white">Home</a>
-                        </li>
-                    </ul>
+    <body class="bg-[#F5F6F8]">
+        <div class="flex min-h-screen">
+            <!-- Sidebar -->
+            <div class="w-60 bg-white rounded-xl shadow-xl p-4 text-dark-gray flex flex-col items-center min-h-screen">
+                <div class="my-8">
+                    <img class="h-24 w-24 rounded-full mb-4" src="/juli.png" alt=""> <!-- Aquí puedes colocar la foto del usuario -->
+                    <h1>Juliana Re</h1>
                 </div>
+                <ul class="flex flex-col items-center gap-2 w-full">
+                    <li class="flex items-center gap-2 group hover:bg-medium-gray px-4 py-2 rounded-md w-full">
+                        <span class="material-symbols-outlined text-medium-gray text-2xl font-bold align-middle group-hover:text-white">dashboard</span>
+                        <a href="/dashboard" class="group-hover:text-white">Admin Dashboard</a>
+                    </li>
+                    <li class="flex items-center gap-2 group hover:bg-medium-gray px-4 py-2 rounded-md w-full">
+                        <span class="material-symbols-outlined text-medium-gray group-hover:text-white text-2xl font-bold align-middle">news</span>
+                        <a href="/dashboard/articles" class="group-hover:text-white">Artículos</a>
+                    </li>
+                    <li class="flex items-center gap-2 group hover:bg-medium-gray px-4 py-2 rounded-md w-full">
+                        <span class="material-symbols-outlined text-medium-gray group-hover:text-white text-2xl font-bold align-middle">grocery</span>
+                        <a href="/dashboard/recipes" class="group-hover:text-white">Recetas</a>
+                    </li>
+                </ul>
+                <div class="w-full bg-medium-gray h-[1px] my-8"></div>
+                <ul class="flex flex-col items-center gap-2 w-full">
+                    <li class="flex items-center gap-2 group hover:bg-medium-gray px-4 py-2 rounded-md w-full">
+                        <span class="material-symbols-outlined text-medium-gray hover text-2xl font-bold align-middle group-hover:text-white">home</span>
+                        <a href="/" class="group-hover:text-white">Home</a>
+                    </li>
+                </ul>
             </div>
-            <div class="w-[calc(100%-240px)] absolute right-0 bg-[#F5F6F8]">
+            <!-- Contenido -->
+            <div class="flex-1 bg-[#F5F6F8] p-6">
                 {{ $slot }}
             </div>
         </div>

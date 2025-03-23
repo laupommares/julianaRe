@@ -3,11 +3,15 @@
 namespace App\Livewire\Components\Search;
 
 use Livewire\Component;
+use Livewire\Attributes\Url; // 🔹 Importación necesaria
 
 class Search extends Component
 {
+    #[Url] // 🔹 Esto mantiene el valor en la URL
     public $searchText = '';
-    public $type = 'articles'; // Valor por defecto
+
+    #[Url] // 🔹 También puede ser útil almacenar el tipo en la URL
+    public $type = 'articles';
 
     public function updatedSearchText()
     {

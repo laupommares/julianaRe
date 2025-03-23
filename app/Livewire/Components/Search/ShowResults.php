@@ -3,7 +3,7 @@
 namespace App\Livewire\Components\Search;
 
 use Livewire\Component;
-use Illuminate\Support\Str;
+use Livewire\Attributes\Url; 
 
 class ShowResults extends Component
 {
@@ -11,17 +11,22 @@ class ShowResults extends Component
     public $modelClass;
     public $routeName;
 
+    #[Url] // 🔹 Ahora la búsqueda se almacena en la URL correctamente
+    public $searchText = '';
+
     protected $listeners = ['searchUpdated' => 'filterResults'];
 
     public function mount($modelClass, $routeName)
     {
         $this->modelClass = $modelClass;
         $this->routeName = $routeName;
-        $this->loadAll();
+        $this->filterResults($this->searchText); // 🔹 Restaurar búsqueda desde la URL
     }
 
     public function filterResults($searchText)
     {
+        $this->searchText = $searchText;
+
         if (empty($searchText)) {
             $this->loadAll();
         } else {

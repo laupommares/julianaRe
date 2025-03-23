@@ -6,7 +6,7 @@ use App\Livewire\Forms\PostForm;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
-class CreateArticle extends Component
+class CreatePost extends Component
 {
     use WithFileUploads;
     
@@ -17,7 +17,7 @@ class CreateArticle extends Component
         $this->form->image = $this->image;
         $this->form->store();   
 
-        $this->redirect('/dashboard/articles', navigate:true);
+        return redirect()->route('dashboard.articles');
     }
     
     public function generateSlug()
@@ -27,6 +27,6 @@ class CreateArticle extends Component
     
     public function render()
     {
-        return view('livewire.admin.create-article')->layout('livewire.layouts.admin');
+        return view('livewire.admin.create-post')->layout('livewire.layouts.admin');
     }
 }

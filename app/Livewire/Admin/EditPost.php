@@ -8,7 +8,7 @@ use Livewire\Component;
 use App\Models\Article;
 use Illuminate\Support\Str;
 
-class EditArticle extends Component
+class EditPost extends Component
 {
     
     use WithFileUploads;
@@ -62,6 +62,6 @@ class EditArticle extends Component
     }
     public function render()
     {
-        return view('livewire.admin.edit-article')->layout('livewire.layouts.admin');
+        return view('livewire.admin.edit-post')->layout('livewire.layouts.admin');
     }
 }

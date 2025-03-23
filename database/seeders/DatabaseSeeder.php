@@ -1,8 +1,9 @@
 <?php
 namespace Database\Seeders;
 
-use App\Models\Article; // No necesitas importar User si no lo usas
 use Illuminate\Database\Seeder;
+use App\Models\Article;
+use App\Models\Recipe;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,15 +12,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Si no necesitas usar User, puedes eliminar estas líneas:
-        // User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        // Sembrar artículos
+        Article::factory()->count(50)->create();
 
-        // Crear 50 artículos de ejemplo
-        Article::factory()
-            ->count(50)
-            ->create();
+        // Sembrar recetas directamente aquí
+        Recipe::factory()->count(20)->create();
     }
 }
+

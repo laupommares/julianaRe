@@ -18,11 +18,12 @@ class RecipeFactory extends Factory
         $title = $this->faker->word();
 
         return [
-            'title' => $this->faker->word(),
-            'slug' => Str::slug($title),
+            'title' => fake()->realText(50),
+            'slug' => Str::slug(fake()->realText(50)), // Generamos un slug para el título
             'description' => $this->faker->paragraph(),
             'ingredients' => $this->faker->sentence(),
             'instructions' => $this->faker->paragraph(),
+            'image' => fake()->imageUrl(), // 🔹 Imagen aleatoria de comida
         ];
     }
 }

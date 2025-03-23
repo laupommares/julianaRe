@@ -1,17 +1,18 @@
 <?php
-
 namespace App\Livewire\Components\Search;
 
 use Livewire\Component;
-use Livewire\Attributes\Url; 
+use Livewire\Attributes\Url;
+use Livewire\WithPagination;
 
 class ShowResults extends Component
 {
-    public $results = [];
+    use WithPagination;
+
     public $modelClass;
     public $routeName;
 
-    #[Url] // 🔹 Ahora la búsqueda se almacena en la URL correctamente
+    #[Url] 
     public $searchText = '';
 
     protected $listeners = ['searchUpdated' => 'filterResults'];
@@ -20,32 +21,19 @@ class ShowResults extends Component
     {
         $this->modelClass = $modelClass;
         $this->routeName = $routeName;
-        $this->filterResults($this->searchText); // 🔹 Restaurar búsqueda desde la URL
+        logger("Model Class: " . $this->modelClass); 
     }
 
-    public function filterResults($searchText)
+    public function updatingSearchText()
     {
-        $this->searchText = $searchText;
-
-        if (empty($searchText)) {
-            $this->loadAll();
-        } else {
-            $this->results = $this->modelClass::where('title', 'LIKE', "%{$searchText}%")
-                ->orWhere('description', 'LIKE', "%{$searchText}%")
-                ->get();
-        }
-    }
-
-    public function loadAll()
-    {
-        $this->results = $this->modelClass::all();
+        $this->resetPage(); // 🔹 Resetea la paginación cuando cambia la búsqueda
     }
 
     public function render()
     {
         return view('livewire.components.search.show-results', [
-            'results' => $this->results,
-            'routeName' => $this->routeName
+            'results' => $this->modelClass::paginate(10), // 🔹 Asegúrate de que aquí está la paginación
         ]);
     }
+    
 }

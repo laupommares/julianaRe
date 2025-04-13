@@ -1,4 +1,4 @@
-<div class="relative h-auto flex items-center text-dark {{ $type === 'short' ? ' py-16' : 'py-20' }}">
+<div class="relative min-h-screen flex items-center text-dark {{ $type === 'short' ? ' py-16' : 'py-20' }}">
     <div class="container flex flex-basis">
         <div class="flex flex-col w-1/2 pr-16">
             <h1 class="font-slab text-4xl leading-10">¿Tenés preguntas <br> o deseas más información? <br>¡Contactame!</h1>

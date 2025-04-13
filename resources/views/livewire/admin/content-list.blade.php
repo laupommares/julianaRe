@@ -2,12 +2,12 @@
     <div class="my-8 flex justify-between items-center">
         <a href="/dashboard/articles/create"
            class="p-4 rounded-sm bg-blue text-white hover:bg-blue/70"
-           wire:navigate>Crear artículo</a>
+           wire:navigate>Crear {{ $modelClass == 'App\Models\Article' ? 'artículo' : 'receta' }}</a>
         <div class="">
             <button class="p-2 rounded-md bg-light-gray"
                     wire:click="showAll()">Mostrar todo</button>
             <button class="p-2 rounded-md bg-light-gray"
-                    wire:click="showPublished()">Artículos publicados (<livewire:admin.published-count placeholder-text="Cargando..." lazy>)</button>
+                    wire:click="showPublished()">{{ $modelClass == 'App\Models\Article' ? 'Artículos publicados' : 'Recetas publicadas' }} (<livewire:admin.published-count placeholder-text="Cargando..." lazy>)</button>
         </div>
     </div>
 

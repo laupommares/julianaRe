@@ -14,6 +14,7 @@ use App\Livewire\Admin\RecipeList;
 use App\Livewire\Admin\CreatePost;
 use App\Livewire\Admin\EditPost;
 use App\Models\Article;
+use App\Models\Recipe;
 
 
 Route::get('/', Home::class)->name('livewire.pages.home');
@@ -26,6 +27,9 @@ Route::get('/dashboard/articles', ContentList::class)->defaults('modelClass', Ar
 Route::get('/dashboard/articles/{article}/edit' , EditPost::class);
 Route::get('/dashboard/articles/create', CreatePost::class);
 
+Route::get('/dashboard/recipes', ContentList::class)->defaults('modelClass', Recipe::class)->name('dashboard.recipes');
+Route::get('/dashboard/recipes/{article}/edit' , EditPost::class);
+Route::get('/dashboard/recipes/create', CreatePost::class);
 /* Route::get('/dashboard/articles', ArticleList::class)->name('dashboard.articles');
 Route::get('/dashboard/articles/create', CreateArticle::class);
 Route::get('/dashboard/articles/{article}/edit' , EditArticle::class);

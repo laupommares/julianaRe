@@ -23,17 +23,31 @@ class ShowResults extends Component
         $this->routeName = $routeName;
         logger("Model Class: " . $this->modelClass); 
     }
+    public function filterResults($searchText)
+    {
+        $this->searchText = $searchText;
+    }
 
     public function updatingSearchText()
     {
         $this->resetPage(); // 🔹 Resetea la paginación cuando cambia la búsqueda
     }
-
+    
     public function render()
     {
+        $query = $this->modelClass::query();
+    
+        if ($this->searchText !== '') {
+            $query->where(function ($q) {
+                $q->where('title', 'like', '%' . $this->searchText . '%')
+                  ->orWhere('description', 'like', '%' . $this->searchText . '%');
+            });
+        }
+    
         return view('livewire.components.search.show-results', [
-            'results' => $this->modelClass::paginate(10), // 🔹 Asegúrate de que aquí está la paginación
+            'results' => $query->paginate(10),
         ]);
     }
+    
     
 }

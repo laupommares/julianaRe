@@ -18,7 +18,7 @@
                     <h1>Juliana Re</h1>
                 </div>
                 <ul class="flex flex-col items-center gap-2 w-full">
-                    <li class="flex items-center gap-2 group hover:bg-medium-gray px-4 py-2 rounded-md w-full">
+                    <li class="flex items-center gap-2 group hover:bg-medium-gray  fo px-4 py-2 rounded-md w-full">
                         <span class="material-symbols-outlined text-medium-gray text-2xl font-bold align-middle group-hover:text-white">dashboard</span>
                         <a href="/dashboard" class="group-hover:text-white">Admin Dashboard</a>
                     </li>

@@ -7,10 +7,10 @@ use Livewire\Attributes\Url; // 🔹 Importación necesaria
 
 class Search extends Component
 {
-    #[Url] // 🔹 Esto mantiene el valor en la URL
+    #[Url(as:'q', except:'', history:true)]
     public $searchText = '';
 
-    #[Url] // 🔹 También puede ser útil almacenar el tipo en la URL
+    #[Url]
     public $type = 'articles';
 
     public function updatedSearchText()

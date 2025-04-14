@@ -12,7 +12,7 @@ class ShowResults extends Component
     public $modelClass;
     public $routeName;
 
-    #[Url] 
+    #[Url(as:'q', except:'', history:true)] 
     public $searchText = '';
 
     protected $listeners = ['searchUpdated' => 'filterResults'];
@@ -32,7 +32,7 @@ class ShowResults extends Component
     {
         $this->resetPage(); // 🔹 Resetea la paginación cuando cambia la búsqueda
     }
-    
+
     public function render()
     {
         $query = $this->modelClass::query();

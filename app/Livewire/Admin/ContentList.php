@@ -14,10 +14,15 @@ class ContentList extends Component
 
     public $showOnlyPublished = false;
 
-    public function delete($model) {  // Usamos un parámetro genérico en lugar de un tipo específico
-        $model->delete();  // El método eliminará el modelo que se pase, ya sea Article o Recipe
+    public function delete($id)
+    {
+        $modelClass = $this->modelClass;
+    
+        $item = $modelClass::findOrFail($id);
+    
+        $item->delete();
     }
-
+    
     public function showAll(){
         $this->showOnlyPublished = false;
         $this->resetPage();

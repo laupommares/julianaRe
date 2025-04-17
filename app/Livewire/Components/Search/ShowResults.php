@@ -12,7 +12,7 @@ class ShowResults extends Component
     public $modelClass;
     public $routeName;
 
-    #[Url(as:'q', except:'', history:true)] 
+    #[Url(as:'q', except:'')] 
     public $searchText = '';
 
     protected $listeners = ['searchUpdated' => 'filterResults'];

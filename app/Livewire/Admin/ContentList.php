@@ -1,10 +1,9 @@
 <?php
 namespace App\Livewire\Admin;
 
-use App\Models\Article;
-use App\Models\Recipe;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Livewire\Attributes\Session;
 
 class ContentList extends Component
 {
@@ -12,6 +11,7 @@ class ContentList extends Component
 
     public $modelClass;  // Esta propiedad permitirá cambiar entre modelos
 
+    #[Session(key: 'published')] 
     public $showOnlyPublished = false;
 
     public function delete($id)
@@ -23,16 +23,11 @@ class ContentList extends Component
         $item->delete();
     }
     
-    public function showAll(){
-        $this->showOnlyPublished = false;
+    public function toglePublished($showOnlyPublished){
+        $this->showOnlyPublished = $showOnlyPublished;
         $this->resetPage();
     }
 
-    public function showPublished(){
-        $this->showOnlyPublished = true;
-        $this->resetPage();
-    }
-    
     public function render()
     {
         // Aquí hacemos que la consulta dependa de $modelClass

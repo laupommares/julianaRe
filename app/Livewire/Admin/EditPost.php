@@ -2,64 +2,62 @@
 
 namespace App\Livewire\Admin;
 
-use App\Livewire\Forms\PostForm;
-use Livewire\WithFileUploads;
 use Livewire\Component;
-use App\Models\Article;
-use Illuminate\Support\Str;
+use Livewire\WithFileUploads;
+use App\Livewire\Forms\PostForm;
 
 class EditPost extends Component
 {
-    
     use WithFileUploads;
 
     public $image;
+    public string $model;
+    public $modelInstance;
+    public $modelClass;
     public PostForm $form;
-
-    public function mount(Article $article)
-    {
-        $this->form = new PostForm($this, 'form');
-        $this->form->setArticle($article);
-    }
     
-    public function save()
+    public function mount(string $model, int $id)
     {
-        if (!$this->form->article) {
-            session()->flash('message', 'Error: No se encontró el artículo.');
-            return;
+        // Validar que el modelo esté permitido
+        $this->model = $model;
+        $allowedModels = [
+            'article' => \App\Models\Article::class,
+            'recipe' => \App\Models\Recipe::class,
+        ];
+    
+        if (!array_key_exists($model, $allowedModels)) {
+            abort(404);
         }
     
-        // Asegurar que la imagen siempre sea un archivo subido
+        $this->modelClass = $allowedModels[$model];
+        $this->modelInstance = $this->modelClass::findOrFail($id);
+    
+        $this->form = new PostForm($this, 'form');
+        $this->form->setModel($this->modelInstance);
+    }
+    public function save()
+    {
+        if (!$this->form->modelInstance) {
+            session()->flash('message', 'Error: No se encontró el contenido.');
+            return;
+        }
+
         if ($this->image instanceof \Illuminate\Http\UploadedFile) {
             $this->form->image = $this->image;
         }
-    
+
         $this->form->update();
-    
-        return redirect()->route('dashboard.articles');
+
+        // Redireccionar según el tipo
+        $type = strtolower(class_basename($this->modelClass));
+        return redirect()->route("dashboard.{$type}s");
+        
     }
-    
     public function generateSlug()
     {
-        if (!$this->form->content) {
-            $this->slug = '';
-            return;
-        }
-
-        // Tomar las primeras 6 palabras del contenido
-        $words = Str::of($this->form->content)->words(6, '');
-        $baseSlug = Str::slug($words);
-        $slug = $baseSlug;
-        $count = 1;
-
-        // Verificar si el slug ya existe y añadir un sufijo si es necesario
-        while (Article::where('slug', $slug)->exists()) {
-            $slug = $baseSlug . '-' . $count;
-            $count++;
-        }
-
-        $this->slug = $slug;
+        $this->form->generateSlug();
     }
+
     public function render()
     {
         return view('livewire.admin.edit-post')->layout('livewire.layouts.admin');

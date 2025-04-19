@@ -38,8 +38,10 @@
                     </td>
                     <td class="flex flex-col gap-2 px-4 justify-center">
                         <a class="bg-blue hover:bg-blue/70 text-white p-2 rounded-md"
-                           href="/dashboard/{{$modelClass == 'App\Models\Article' ? 'articles' : 'recipes'}}/{{$item->id}}/edit"
-                           wire:navigate>Editar</a> <!-- Cambiar la ruta dependiendo del modelo -->
+                        href="{{ route('dashboard.edit', ['model' => $modelClass == 'App\Models\Article' ? 'article' : 'recipe', 'id' => $item->id]) }}"
+                        wire:navigate>
+                        Editar
+                     </a>                     
                         <button class="bg-orange hover:bg-orange/70 text-dark p-2 rounded-md"
                                 wire:click="delete({{$item->id}})"
                                 wire:confirm="¿Estás segura que queres borrar este artículo?">Borrar</button>

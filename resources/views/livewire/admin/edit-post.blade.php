@@ -7,9 +7,12 @@
 
     <div class="flex py-8 gap-2 text-dark-gray">
         <span class="material-symbols-outlined text-2xl font-bold align-middle">add_notes</span>
-        <h1 class="text-2xl font-slab">Editar artículo</h1>
+        <h1 class="text-2xl font-slab">{{ $model ==='article' ? 'Editar Artículo' : 'Editar Receta' }}</h1>
     </div>
-    <form wire:submit="save" class="space-y-4">
+    <form x-data="{ dirty: false }"
+        x-on:input.debounce="dirty = true"
+        wire:submit="save"
+        class="space-y-4">
         <!-- Título -->
         <div>
             <label wire:dirty.class="text-orange" wire:target="form.title" for="title" class="block text-sm font-medium text-dark">
@@ -34,7 +37,7 @@
         <!-- Contenido -->
         <div>
             <label wire:dirty.class="text-orange" wire:target="form.content" for="content" class="block text-sm font-medium text-dark">
-                Contenido <span wire:dirty wire:target="form.content" class="mb-2">*</span>
+                {{ $model ==='article' ? 'Contenido' : 'Ingredientes' }} <span wire:dirty wire:target="form.content" class="mb-2">*</span>
             </label>
             <textarea id="content" wire:model="form.content" wire:keyup="generateSlug"
                 class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue focus:border-blue"
@@ -51,8 +54,8 @@
 
             @if ($image)
             <img src="{{ $image->temporaryUrl() }}" class="mt-2 h-20 w-20 rounded">
-        @elseif ($form->article && $form->article->image)
-            <img src="{{ Storage::url($form->article->image) }}" class="mt-2 h-20 w-20 rounded">
+        @elseif ($form->modelInstance && $form->modelInstance->image)
+            <img src="{{ Storage::url($form->modelInstance->image) }}" class="mt-2 h-20 w-20 rounded">
         @endif
         
             @error('image') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
@@ -105,12 +108,13 @@
         
         <!-- Botón -->
         <button 
-            class="w-full bg-blue text-white py-2 rounded-md shadow transition disabled:opacity-75 disabled:bg-blue/60 " 
-            type="submit"
-            wire:dirty.class="hover:bg-blue/70"
-            wire:dirty.remove.attr="disabled"
-            disabled>
-            Guardar Artículo
-        </button>
+        class="w-full bg-blue text-white py-2 rounded-md shadow transition disabled:opacity-75 disabled:bg-blue/60"
+        :class="{ 'hover:bg-blue/70': dirty }"
+        :disabled="!dirty"
+        type="submit"
+    >
+        Guardar {{ $model === 'article' ? 'Artículo' : 'Receta' }}
+    </button>
+    
     </form>
 </div>

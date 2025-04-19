@@ -10,12 +10,15 @@ class PublishedCount extends Component
 {
     public $count = 0;
     public $placeholderText= '';
+    public $modelClass;
 
-    public function mount() {
+    public function mount($modelClass)
+    {
         sleep(1);
-        $this->count = Article::where('published', 1)->count();
+        $this->modelClass = $modelClass;
+        $this->count = $modelClass::where('published', 1)->count();
     }
-
+    
     public function placeholder(){
         return view('livewire.admin.placeholder',[
             'message' => $this->placeholderText,

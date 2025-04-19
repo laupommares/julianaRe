@@ -53,10 +53,15 @@
             <input type="file" id="image" wire:model="image" class="block w-full text-dark pt-1">
 
             @if ($image)
-            <img src="{{ $image->temporaryUrl() }}" class="mt-2 h-20 w-20 rounded">
-        @elseif ($form->modelInstance && $form->modelInstance->image)
-            <img src="{{ Storage::url($form->modelInstance->image) }}" class="mt-2 h-20 w-20 rounded">
-        @endif
+                <img src="{{ $image->temporaryUrl() }}" class="mt-2 h-20 w-20 rounded">
+            @elseif ($form->modelInstance && $form->modelInstance->image)
+            @php
+                $image = $form->modelInstance->image;
+                $isExternal = Str::startsWith($image, ['http://', 'https://']);
+            @endphp
+                <img src="{{ $isExternal ? $image : Storage::url($image) }}" class="mt-2 h-20 w-20 rounded">
+            @endif
+        
         
             @error('image') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         </div>

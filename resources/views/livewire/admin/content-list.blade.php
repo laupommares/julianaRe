@@ -5,15 +5,16 @@
            wire:navigate>Crear {{ $modelClass == 'App\Models\Article' ? 'artículo' : 'receta' }}</a>
         <div class="">
             <button @class(['p-2 rounded-md',
-                    'bg-light-gray' => $showOnlyPublished,
-                    'bg-green' =>!$showOnlyPublished,
-                    ])
-                    wire:click="toglePublished(false)">Mostrar todo</button>
+                'bg-light-gray' => $showOnlyPublished,
+                'bg-green' =>!$showOnlyPublished,])
+                wire:click="toglePublished(false)">Mostrar todo</button>
             <button @class(['p-2 rounded-md',
-                    'bg-green' => $showOnlyPublished,
-                    'bg-light-gray' =>!$showOnlyPublished,
-                    ])
-                    wire:click="toglePublished(true)">{{ $modelClass == 'App\Models\Article' ? 'Artículos publicados' : 'Recetas publicadas' }} (<livewire:admin.published-count placeholder-text="Cargando..." lazy>)</button>
+                'bg-green' => $showOnlyPublished,
+                'bg-light-gray' =>!$showOnlyPublished,])
+                wire:click="toglePublished(true)">
+                {{ $modelClass == 'App\Models\Article' ? 'Artículos publicados' : 'Recetas publicadas' }}
+                (<livewire:admin.published-count :model-class="$modelClass" placeholder-text="Cargando..." lazy />)
+            </button>
         </div>
     </div>
 
@@ -43,8 +44,8 @@
                         Editar
                      </a>                     
                         <button class="bg-orange hover:bg-orange/70 text-dark p-2 rounded-md"
-                                wire:click="delete({{$item->id}})"
-                                wire:confirm="¿Estás segura que queres borrar este artículo?">Borrar</button>
+                            wire:click="delete({{$item->id}})"
+                            wire:confirm="¿Estás segura que queres borrar este artículo?">Borrar</button>
                     </td>
                 </tr>
             @endforeach

@@ -22,6 +22,9 @@ class PostForm extends Form
     #[Validate('required')]
     public $content = ''; 
 
+    #[Validate('required_if:modelClass,App\Models\Recipe')]
+    public $ingredients = '';
+
     public $image;
     public $imagePath;
 
@@ -37,18 +40,30 @@ class PostForm extends Form
         $this->title = $model->title;
         $this->description = $model->description;
         $this->content = $model instanceof \App\Models\Recipe ? $model->instructions : $model->content;
+        if ($model instanceof \App\Models\Recipe) {
+            $this->ingredients = $model->ingredients;
+        }        
         $this->slug = $model->slug;
         $this->published = $model->published;
         $this->notifications = $model->notifications ?? [];
     
         $this->allowNotifications = count($this->notifications) > 0;
     }
-    
 
     public function store()
     {
-        $this->validate();
-
+        $this->validate([
+            'title' => 'required',
+            'slug' => 'required',
+            'description' => 'required',
+            'content' => 'required',
+            'image' => 'required|image',
+        ], [
+            'image.required' => 'La imagen es obligatoria.',
+            'image.image' => 'El archivo debe ser una imagen válida (jpg, png, etc).',
+        ]);
+        
+        
         if (!$this->allowNotifications) {
             $this->notifications = [];
         }
@@ -65,6 +80,7 @@ class PostForm extends Form
             'slug' => $this->slug,
             'description' => $this->description,
             $this->modelClass === \App\Models\Recipe::class ? 'instructions' : 'content' => $this->content,
+            'ingredients' => $this->modelClass === \App\Models\Recipe::class ? $this->ingredients : null,
             'image' => $imagePath,
             'published' => $this->published,
             'notifications' => $this->notifications,
@@ -75,7 +91,13 @@ class PostForm extends Form
 
     public function update()
     {
-        $this->validate();
+        $this->validate([
+            'title' => 'required',
+            'slug' => 'required',
+            'description' => 'required',
+            'content' => 'required',
+            'image' => 'nullable|image',
+        ]);        
 
         if (!$this->allowNotifications) {
             $this->notifications = [];
@@ -83,7 +105,9 @@ class PostForm extends Form
 
         if ($this->image instanceof \Illuminate\Http\UploadedFile) {
             $folder = Str::plural(Str::kebab(class_basename($this->modelClass)));
-            $imagePath = $this->image->store($folder, 'public');
+            $imagePath = $this->image
+            ? $this->image->store($folder, 'public')
+            : '/Users/lau/Desktop/nophoto.png/Users/lau/Desktop/nophoto.pngnophoto.png'; // o lo que prefieras
         } else {
             $imagePath = $this->modelInstance->image ?? null;
         }
@@ -91,11 +115,12 @@ class PostForm extends Form
         $this->modelInstance->update([
             'title' => $this->title,
             'description' => $this->description,
+            'ingredients' => $this->modelClass === \App\Models\Recipe::class ? $this->ingredients : null,
             $this->modelClass === \App\Models\Recipe::class ? 'instructions' : 'content' => $this->content,
             'image' => $imagePath,
             'published' => $this->published,
             'notifications' => $this->notifications,
-        ]);
+        ]);        
         
 
         session()->flash('message', 'Contenido actualizado con éxito.');

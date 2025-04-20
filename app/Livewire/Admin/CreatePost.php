@@ -11,14 +11,39 @@ class CreatePost extends Component
     use WithFileUploads;
     
     public $image;
-    public PostForm $form;
+    public $form;
+    public string $model;
 
-    public function save (){
-        $this->form->image = $this->image;
-        $this->form->store();   
+    public $modelClass;
 
-        return redirect()->route('dashboard.articles');
+    public function mount(string $model)
+    {
+        $this->model = $model;
+    
+        $allowedModels = [
+            'article' => \App\Models\Article::class,
+            'recipe' => \App\Models\Recipe::class,
+        ];
+    
+        if (!array_key_exists($model, $allowedModels)) {
+            abort(404);
+        }
+    
+        $this->modelClass = $allowedModels[$model];
+    
+        $this->form = new PostForm($this, 'form');
+        $this->form->modelClass = $this->modelClass;
     }
+    
+    public function save()
+    {
+        $this->form->image = $this->image;
+        $this->form->store();
+    
+        $type = strtolower(class_basename($this->modelClass));
+        return redirect()->route("dashboard.{$type}s");
+    }
+    
     
     public function generateSlug()
     {

@@ -1,6 +1,6 @@
 <div class="mx-24 w-1/2 mb-4 text-dark mt-20 h-full">
     <div class="my-8 flex justify-between items-center">
-        <a href="/dashboard/articles/create"
+        <a href="{{ route('dashboard.create', ['model' => $modelClass === 'App\Models\Article' ? 'article' : 'recipe']) }}"
            class="p-4 rounded-sm bg-blue text-white hover:bg-blue/70"
            wire:navigate>Crear {{ $modelClass == 'App\Models\Article' ? 'artículo' : 'receta' }}</a>
         <div class="">

@@ -1,6 +1,5 @@
 <?php
 namespace App\Livewire\Admin;
-
 use Livewire\Component;
 use Livewire\WithPagination;
 use Livewire\Attributes\Session;

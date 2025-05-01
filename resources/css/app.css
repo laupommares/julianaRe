@@ -19,3 +19,25 @@ input:valid, textarea:valid, select:valid {
   'GRAD' 0,
   'opsz' 48
 }
+
+html{
+  max-height: 100vh;
+}
+
+input:focus {
+  outline: none;
+  border-color: #73A1AC; /* tu azul personalizado */
+  box-shadow: 0 0 0 2px #73A1AC; /* simula el ring azul */
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  transition: background-color 9999s ease-in-out 0s;
+  background-color: #eae8e8 !important;
+  color: #6D6D6D !important;
+  -webkit-text-fill-color: #6D6D6D !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+  border-color: #73A1AC !important;
+
+}

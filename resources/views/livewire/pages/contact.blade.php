@@ -1,3 +1,3 @@
 <div>
-   <livewire:components.controls.form-contact>
+   <livewire:components.controls.form-contact type=long>
 </div>

@@ -32,7 +32,7 @@ class Login extends Component
             return redirect()->route('livewire.pages.home'); 
         }
     
-        session()->flash('error', 'Las credenciales no son correctas.');
+        session()->flash('error', 'El usuario o la contraseña no son correctos.');
     }
     
     public function logout()

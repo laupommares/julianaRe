@@ -1,5 +1,5 @@
-<div class="relative min-h-screen flex items-center text-dark {{ $type === 'short' ? ' py-16' : 'py-20' }}">
-    <div class="container flex flex-basis">
+<div class="relative flex min-h-screen items-center text-dark">
+    <div class="container flex flex-basis {{ $type === 'short' ? ' py-20' : 'py-24' }}">
         <div class="flex flex-col w-1/2 pr-16">
             <h1 class="font-slab text-4xl leading-10">¿Tenés preguntas <br> o deseas más información? <br>¡Contactame!</h1>
             <div class="bg-orange h-2 w-32 my-8 rounded-md"></div>

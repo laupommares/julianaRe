@@ -41,6 +41,7 @@ export default {
                 'light-orange': '#FFC93D',
                 orange: '#F5BE30',
                 'dark-gray': '#6D6D6D',
+                alert: '#D65C5C',
             },
         },
     },

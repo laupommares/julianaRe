@@ -9,106 +9,100 @@
         </div>
         <div class="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-6xl lg:grid-cols-3">
             <div class="rounded-3xl rounded-t-3xl bg-white/60 p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-b-none sm:p-10 lg:mx-0 lg:rounded-tr-none lg:rounded-bl-3xl">
-                <h3 id="tier-hobby" class="text-base/7 font-semibold text-orange">Cambio de Hábitos</h3>
+                <h3 id="tier-hobby" class="text-base/7 font-semibold text-orange">Para nutrirse</h3>
                 <p class="mt-4 flex items-baseline gap-x-2">
-                    <span class="text-5xl font-semibold tracking-tight text-gray-900">$30.000</span>
-                    <span class="text-base text-gray-500">/mes</span>
+                    <span class="text-5xl font-semibold tracking-tight text-gray-900">Talleres</span>
+                    <span class="text-base text-gray-500"></span>
                 </p>
-                <p class="mt-6 text-base/7 text-gray-600">Objetivo: Adoptar hábitos alimenticios saludables de manera progresiva</p>
+                <p class="mt-6 text-base/7 text-gray-600">Objetivo: Espacios donde abordamos distintos aspectos de la alimentación real y consciente.</p>
                 <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-600 sm:mt-10">
                 <li class="flex gap-x-3">
                     <svg class="h-6 w-5 flex-none text-orange" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
                     </svg>
-                    Evaluación inicial personalizada
+                    Cada taller te brinda herramientas reales para transformar tu relación con la nutrición desde un enfoque integral.
                 </li>
                 <li class="flex gap-x-3">
                     <svg class="h-6 w-5 flex-none text-orange" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
                     </svg>
-                    Plan de alimentación flexible
+                    Los talleres se irán habilitando en diferentes momentos del año, con cupos limitados.
                     </li>
                 <li class="flex gap-x-3">
                     <svg class="h-6 w-5 flex-none text-orange" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
                     </svg>
-                    Seguimiento semanal con ajustes
-                </li>
-                <li class="flex gap-x-3">
-                    <svg class="h-6 w-5 flex-none text-orange" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
-                    </svg>
-                    Ejercicios de coaching para identificar creencias limitantes sobre la alimentación
+                    Si querés enterarte de las próximas fechas, contenidos y cómo inscribirte, dejá tus datos para que te avisemos.
                 </li>
                 </ul>
                 <a href="#" aria-describedby="tier-hobby" class="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white bg-orange focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10">Empezar ahora</a>
             </div>
             <div class="relative rounded-3xl bg-dark-gray p-8 ring-1 shadow-2xl ring-gray-900/10 sm:p-10">
-                <h3 id="tier-enterprise" class="text-base/7 font-semibold text-orange">Nutrición Conscient</h3>
+                <h3 id="tier-enterprise" class="text-base/7 font-semibold text-orange">Recuperá tu balance</h3>
                 <p class="mt-4 flex items-baseline gap-x-2">
-                <span class="text-5xl font-semibold tracking-tight text-white">$45</span>
-                <span class="text-base text-gray-400">/mes</span>
+                <span class="text-5xl font-semibold tracking-tight text-white">$30.000</span>
+                <span class="text-base text-gray-400">/pago único</span>
                 </p>
-                <p class="mt-6 text-base/7 text-gray-300">Objetivo: Aprender a escuchar el cuerpo y comer de manera intuitiva</p>
+                <p class="mt-6 text-base/7 text-gray-300"> Objetivo: Reducir la inflamación del cuerpo y recuperar tu energía y bienestar natural.                    .</p>
                 <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-300 sm:mt-10">
                 <li class="flex gap-x-3">
                     <svg class="h-6 w-5 flex-none text-orange" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
                     </svg>
-                    Evaluación inicial y objetivos personalizados
+                    Podés descargar el programa a tu dispositivo y conservarlo para siempre.
                 </li>
                 <li class="flex gap-x-3">
                     <svg class="h-6 w-5 flex-none text-orange" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
                     </svg>
-                    Plan de alimentación adaptado a tu estilo de vida
+                    Una vez comprado, podés verlo todas las veces que quieras, sin restricciones.
                 </li>
                 <li class="flex gap-x-3">
                     <svg class="h-6 w-5 flex-none text-orange" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
                     </svg>
-                    Sesiones de coaching ontológico para mejorar la relación con la comida
+                    Al adquirirlo, recibís desde el primer momento la planificación completa para empezar sin demoras.
                 </li>
                 <li class="flex gap-x-3">
                     <svg class="h-6 w-5 flex-none text-orange" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
                     </svg>
-                    Guía de preparación de comidas y snacks saludables
+                    Este es el programa ideal para comenzar. Estructurado paso a paso para que puedas avanzar de forma clara, incluso si estás empezando.
                 </li>
                 </ul>
                 <a href="#" aria-describedby="tier-enterprise" class="mt-8 block rounded-md bg-orange px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 sm:mt-10">Empezar ahora</a>
             </div>
             <div class="rounded-3xl rounded-t-3xl bg-white/60 p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:rounded-b-none sm:p-10 lg:mx-0 lg:rounded-tl-none lg:rounded-br-3xl">
-                <h3 id="tier-hobby" class="text-base/7 font-semibold text-orange">Cambio de Hábitos</h3>
+                <h3 id="tier-hobby" class="text-base/7 font-semibold text-orange">Recursos Gratuitos para Empezar Hoy</h3>
                 <p class="mt-4 flex items-baseline gap-x-2">
-                    <span class="text-5xl font-semibold tracking-tight text-gray-900">$30.000</span>
-                    <span class="text-base text-gray-500">/mes</span>
+                    <span class="text-5xl font-semibold tracking-tight text-gray-900">Gratis</span>
+                    <span class="text-base text-gray-500"></span>
                 </p>
-                <p class="mt-6 text-base/7 text-gray-600">Objetivo: Adoptar hábitos alimenticios saludables de manera progresiva</p>
+                <p class="mt-6 text-base/7 text-gray-600">Objetivo: Brindarte recursos simples, prácticos y gratuitos que puedar servierte.</p>
                 <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-600 sm:mt-10">
                 <li class="flex gap-x-3">
                     <svg class="h-6 w-5 flex-none text-orange" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
                     </svg>
-                    Evaluación inicial personalizada
-                </li>
-                <li class="flex gap-x-3">
-                    <svg class="h-6 w-5 flex-none text-orange" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
-                    </svg>
-                    Plan de alimentación flexible
+                    Acceso inmediato al crear tu cuenta gratuita.
                     </li>
                 <li class="flex gap-x-3">
                     <svg class="h-6 w-5 flex-none text-orange" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
                     </svg>
-                    Seguimiento semanal con ajustes
+                    Guías prácticas para dar tus primeros pasos en la alimentación real.
                 </li>
                 <li class="flex gap-x-3">
                     <svg class="h-6 w-5 flex-none text-orange" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
                     <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
                     </svg>
-                    Ejercicios de coaching para identificar creencias limitantes sobre la alimentación
+                    Listas útiles y planificaciones para organizar tus comidas con conciencia.
+                </li>
+                <li class="flex gap-x-3">
+                    <svg class="h-6 w-5 flex-none text-orange" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                    </svg>
+                    Material 100% descargable, para usar a tu ritmo, las veces que quieras.
                 </li>
                 </ul>
                 <a href="#" aria-describedby="tier-hobby" class="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white bg-orange focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10">Empezar ahora</a>

@@ -45,7 +45,7 @@ class Register extends Component
 
         // Aquí podrías redirigir al usuario o mostrar un mensaje de éxito
         session()->flash('message', 'Registro exitoso.');
-        return redirect()->route('components.controls.login'); // Redirigir a la página de login, por ejemplo
+        return redirect()->route('livewire.components.controls.login'); // Redirigir a la página de login, por ejemplo
     }
 
     public function render()

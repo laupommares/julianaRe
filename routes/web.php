@@ -15,7 +15,7 @@ use App\Livewire\Admin\CreatePost;
 use App\Livewire\Admin\EditPost;
 use App\Models\Article;
 use App\Models\Recipe;
-
+use App\Livewire\UserProfile;
 
 Route::get('/', Home::class)->name('livewire.pages.home');
 Route::get('/about-me', AboutMe::class)->name('livewire.pages.about-me');
@@ -59,3 +59,4 @@ Route::get('/recipes/{slug}', ShowDetail::class)
     ->defaults('modelClass', App\Models\Recipe::class)
     ->defaults('routeBack', 'Recetas');
 Route::post('logout', [Login::class, 'logout'])->name('logout');
+Route::get('/user-profile', UserProfile::class)->name('user-profile');

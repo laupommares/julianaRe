@@ -1,16 +1,15 @@
 <div>
     @if($isPreview)
-    <div class="h-[810px] bg-green flex items-center justify-center">
-        <div class="bg-white h-[778px]" style="width: calc(100% - 32px);">
+    <div class="h-[840px] bg-green flex items-center justify-center">
+        <div class="bg-white h-[808px]" style="width: calc(100% - 32px);">
             <div class="container">
                 <div class="flex items-center justify-center">
                     <div class="w-full flex flex-col justify-center items-center my-10 text-dark gap-8">
-                        <h1 class="font-slab text-4xl">Comé rico todos los días.</h1>
+                        <h1 class="font-slab text-4xl">Comé rico todos los días</h1>
                         <p class="text-base font-light leading-8 text-center">
                             Descubrí recetas saludables, fáciles y sabrosas para sumar sabor, variedad y bienestar a tu
                             alimentación diaria.
                         </p>
-
                         <div class="carousel w-full">
                             @php
                             $chunks = $recipes->chunk(2); // Divide en grupos de 2
@@ -45,7 +44,12 @@
                                 </div>
                             </div>
                             @endforeach
+                            
                         </div>
+                        <div class="w-full px-4 flex justify-end">
+                            <a href="/recipes" class="font-bold underline">Accedé a todas las recetas y tips</a>
+                        </div>
+
                     </div>
                 </div>
             </div>

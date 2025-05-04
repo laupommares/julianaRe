@@ -33,7 +33,8 @@
                     <div x-show="isOpen" @click.away="isOpen = false" class="absolute right-0 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <div class="py-1">
                             <!-- Opción de Perfil -->
-                            <button @click="$dispatch('open-user-profile-modal')"  class="block text-start w-full px-4 py-2 text-sm text-green-dark hover:bg-gray-100">Perfil</button>
+                            <!-- Opción de Perfil como link -->
+                            <a href="{{ route('user-profile') }}" class="block text-start w-full px-4 py-2 text-sm text-green-dark hover:bg-gray-100">Perfil</a>
                             <!-- Opción de Cerrar sesión -->
                             <form method="POST" action="{{ route('logout') }}" class="block px-4 py-2 text-sm text-green-dark hover:bg-gray-100">
                                 @csrf
@@ -78,5 +79,5 @@
     </nav>
     
     @livewire('components.controls.login') <!-- Aquí se incluye el componente del modal -->
-    @livewire('user-profile')
+
 </div>

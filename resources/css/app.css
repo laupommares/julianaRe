@@ -24,7 +24,7 @@ html{
   max-height: 100vh;
 }
 
-input:focus {
+input:-moz-focusring {
   outline: none;
   border-color: #73A1AC; /* tu azul personalizado */
   box-shadow: 0 0 0 2px #73A1AC; /* simula el ring azul */

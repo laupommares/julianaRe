@@ -24,28 +24,12 @@ Route::get('/blog', Blog::class)->name('livewire.pages.blog');
 Route::get('/recipes', Recipes::class)->name('livewire.pages.recipes');
 Route::get('/dashboard', Dashboard::class)->name('livewire.admin.dashboard');
 Route::get('/dashboard/articles', ContentList::class)->defaults('modelClass', Article::class)->name('dashboard.articles');
-/* Route::get('/dashboard/articles/{article}/edit' , EditPost::class)->name('dashboard.articles.edit');
- */
-/* Route::get('/dashboard/articles/create', CreatePost::class);
- */ Route::get('/dashboard/{model}/create', CreatePost::class)->name('dashboard.create');
+Route::get('/dashboard/{model}/create', CreatePost::class)->name('dashboard.create');
 
 
 Route::get('/dashboard/recipes', ContentList::class)->defaults('modelClass', Recipe::class)->name('dashboard.recipes');
-/* Route::get('/dashboard/recipes/{article}/edit' , EditPost::class)->name('dashboard.recipes.edit');
- */
-/* Route::get('/dashboard/recipes/create', CreatePost::class); */
-/* Route::get('/dashboard/articles', ArticleList::class)->name('dashboard.articles');
-Route::get('/dashboard/articles/create', CreateArticle::class);
-Route::get('/dashboard/articles/{article}/edit' , EditArticle::class);
-Route::get('/dashboard/recipes', RecipeList::class)->name('dashboard.recipes');
-
- */
 Route::get('/admin/edit/{model}/{id}', EditPost::class)
     ->name('dashboard.edit');
-
-
-
-
 
 // Ruta para ver un artículo del blog
 Route::get('/blog/{slug}', ShowDetail::class)

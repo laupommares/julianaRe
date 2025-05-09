@@ -8,7 +8,7 @@
             </div>
             <div class="flex flex-row flex-wrap gap-6 justify-center">
                 @foreach ($results as $result)
-                <livewire:components.cards.card 
+                <livewire:components.card 
                 :key="$result->id"
                 :image="Storage::url($result->image)" 
                 :title="$result->title"

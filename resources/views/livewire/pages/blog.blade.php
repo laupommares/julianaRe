@@ -12,7 +12,7 @@
                             <!-- Iterar sobre los artículos, mostrar solo el artículo actual -->
                             @foreach ($articles as $index => $result)
                                 <div x-show="current === {{ $index }}" class="transition-opacity duration-500">
-                                    <livewire:components.cards.card 
+                                    <livewire:components.card 
                                         :image="$result->image"
                                         :title="$result->title"
                                         :description="$result->description"

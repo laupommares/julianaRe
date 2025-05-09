@@ -19,7 +19,7 @@
                             <div id="slide{{ $index + 1 }}"
                                 class="carousel-item relative w-full flex gap-4 justify-center">
                                 @foreach ($pair as $recipe)
-                                <livewire:components.cards.card :key="$recipe->id" :image="$recipe->image"
+                                <livewire:components.card :key="$recipe->id" :image="$recipe->image"
                                     :title="$recipe->title" :description="Str::limit($recipe->description, 100)"
                                     :link="route('recipes.show', ['slug' => $recipe->slug])" :slug="$recipe->slug"
                                     :route="'recipes.show'" />

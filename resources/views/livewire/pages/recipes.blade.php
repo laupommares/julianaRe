@@ -44,12 +44,11 @@
                                 </div>
                             </div>
                             @endforeach
-                            
+
                         </div>
                         <div class="w-full px-4 flex justify-end">
                             <a href="/recipes" class="font-bold underline">Accedé a todas las recetas y tips</a>
                         </div>
-
                     </div>
                 </div>
             </div>

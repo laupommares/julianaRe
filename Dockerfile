@@ -21,6 +21,8 @@ RUN sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available
 # Establecer permisos
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html/storage
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache && \
+    chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
 # Establecer directorio de trabajo
 WORKDIR /var/www/html
@@ -31,6 +33,7 @@ RUN composer install --no-dev --optimize-autoloader && \
     php artisan config:clear && \
     php artisan key:generate && \
     php artisan migrate --force
+    php artisan config:cache && php artisan route:cache
 
 # Puerto expuesto
 EXPOSE 80

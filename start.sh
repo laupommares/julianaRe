@@ -1,16 +1,13 @@
 #!/usr/bin/env bash
 
-# Copiá el .env si no existe
-if [ ! -f .env ]; then
-  cp .env.example .env
-fi
+cp .env.example .env
 
-# Instala dependencias PHP
 composer install --no-dev --optimize-autoloader
 
-# Ejecuta migraciones
+php artisan config:clear
 php artisan key:generate
 php artisan migrate --force
+php artisan config:cache
+php artisan route:cache
 
-# Servidor Laravel
-php artisan serve --host 0.0.0.0 --port 10000
+php artisan serve --host=0.0.0.0 --port=$PORT

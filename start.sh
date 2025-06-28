@@ -1,24 +1,34 @@
 #!/usr/bin/env bash
 
-# Forzar uso del .env
+# 1) Forzar uso del .env
 cp .env.example .env
 
-# Limpiar caches por si quedó algo viejo
+# 2) Limpiar caches
 php artisan config:clear
 php artisan cache:clear
 php artisan route:clear
 php artisan view:clear
 
-# Instalar dependencias
+# 3) Instalar dependencias
 composer install --no-dev --optimize-autoloader
 
-# Claves y migraciones
+# 4) Migraciones y key
 php artisan key:generate
 php artisan migrate --force
 
-# Cachear configuración de nuevo
+# 5) Cacheo final
 php artisan config:cache
 php artisan route:cache
 
-# Iniciar el servidor en el puerto que Render espera
+# 6) Asegurarnos de que exista el log
+mkdir -p storage/logs
+touch storage/logs/laravel.log
+chmod 666 storage/logs/laravel.log
+
+# 7) Imprimimos el final del log para ver el error
+echo "=== ÚLTIMOS ERRORES DE LARAVEL ==="
+tail -n 30 storage/logs/laravel.log || true
+echo "================================="
+
+# 8) Arrancamos el servidor
 php artisan serve --host=0.0.0.0 --port=$PORT

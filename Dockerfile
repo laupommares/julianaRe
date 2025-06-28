@@ -24,6 +24,7 @@ RUN chown -R www-data:www-data /var/www/html \
 
 # Establecer directorio de trabajo
 WORKDIR /var/www/html
+RUN cp .env.example .env
 
 # Instalar dependencias y preparar Laravel
 RUN composer install --no-dev --optimize-autoloader && \

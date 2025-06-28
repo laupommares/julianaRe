@@ -12,18 +12,36 @@ export default {
 
     theme: {
         extend: {
+            container: {
+                center: true, // Para que siempre esté centrado (equivalente a mx-auto)
+                padding: '1rem', // Equivalente a px-4
+                screens: {
+                    sm: '540px',
+                    md: '720px',
+                    lg: '960px',
+                    xl: '1140px',
+                    '2xl': '1320px',
+                },
+            },
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Roboto', ...defaultTheme.fontFamily.sans], // Texto normal
+                condensed: ['Roboto Condensed', 'sans-serif'],
+                flex: ['Roboto Flex', 'sans-serif'],
+                mono: ['Roboto Mono', 'monospace'],
+                serif: ['Roboto Serif', 'serif'],
+                slab: ['Roboto Slab', 'serif'],
             },
             colors: {
                 beige: '#D0B9A1', 
                 dark: '#46402A', 
-                gray: '#D9D9D9', 
+                'light-gray': '#D9D9D9',
+                'medium-gray': '#B3B3B3', 
                 green: '#AADBC5',
                 blue: '#73A1AC',
                 'light-orange': '#FFC93D',
                 orange: '#F5BE30',
                 'dark-gray': '#6D6D6D',
+                alert: '#D65C5C',
             },
         },
     },

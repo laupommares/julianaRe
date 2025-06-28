@@ -17,6 +17,8 @@ class Contact extends Component
     public function mount($type = 'short')  // Asignamos un valor por defecto
     {
         $this->type = $type;  // Asignar el valor recibido al componente
+        $this->issue = request()->query('issue', '');
+
     }
     public function enviarFormulario()
     {

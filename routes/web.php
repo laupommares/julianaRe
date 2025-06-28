@@ -10,7 +10,6 @@ use App\Livewire\Pages\Recipes;
 use App\Livewire\Components\Search\ShowDetail;
 use App\Livewire\Admin\Dashboard;
 use App\Livewire\Admin\ContentList;
-use App\Livewire\Admin\RecipeList;
 use App\Livewire\Admin\CreatePost;
 use App\Livewire\Admin\EditPost;
 use App\Models\Article;
@@ -19,7 +18,7 @@ use App\Livewire\UserProfile;
 
 Route::get('/', Home::class)->name('livewire.pages.home');
 Route::get('/about-me', AboutMe::class)->name('livewire.pages.about-me');
-Route::get('/contact', Contact::class)->name('livewire.pages.contact');
+Route::get('/contact', Contact::class)->name('contact');
 Route::get('/blog', Blog::class)->name('livewire.pages.blog');
 Route::get('/recipes', Recipes::class)->name('livewire.pages.recipes');
 Route::get('/dashboard', Dashboard::class)->name('livewire.admin.dashboard');

@@ -25,16 +25,16 @@
             </div>
             <div>
                <label for="contact-issue" class="block text-dark-gray">Asunto del mensaje</label>
-               <select name="" id="contact-issue"
-                  class="border rounded w-full px-3 py-2 text-dark-gray border-blue bg-white placeholder:text-sm placeholder:text-dark-gray/70"
-                  wire:model="issue">
-                  <option value="" {{ empty($issue) ? 'selected' : '' }}>Indicá el asunto de tu mensaje</option>
-                  <option value="talleres">Talleres</option>
-                  <option value="balance">Recuperá tu balance</option>
-                  <option value="recursos-gratuitos">Recursos gratuitos</option>
-                  <option value="otros">Otros</option>
+               <select name="issue" id="contact-issue"
+                   class="border rounded w-full px-3 py-2 text-dark-gray border-blue bg-white placeholder:text-sm placeholder:text-dark-gray/70"
+                   wire:model="issue">
+                   <option value="" disabled {{ empty($issue) ? 'selected' : '' }}>Indicá el asunto de tu mensaje</option>
+                   <option value="talleres">Talleres</option>
+                   <option value="balance">Recuperá tu balance</option>
+                   <option value="recursos-gratuitos">Recursos gratuitos</option>
+                   <option value="otros">Otros</option>
                </select>
-            </div>
+           </div>           
             <div>
                <label for="contact-message" class="block text-dark-gray">Mensaje</label>
                <textarea name="" id="contact-message" cols="30" rows="6"

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # 1) Forzar uso del .env
-cp .env.example .env
+[ -f .env ] || cp .env.example .env
 
 # 2) Limpiar caches
 php artisan config:clear
@@ -29,6 +29,3 @@ chmod 666 storage/logs/laravel.log
 echo "=== ÚLTIMOS ERRORES DE LARAVEL ==="
 tail -n 30 storage/logs/laravel.log || true
 echo "================================="
-
-# 8) Arrancamos el servidor
-php artisan serve --host=0.0.0.0 --port=$PORT

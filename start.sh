@@ -6,23 +6,23 @@ php artisan cache:clear
 php artisan route:clear
 php artisan view:clear
 
-# 2) Instalar dependencias
-composer install --no-dev --optimize-autoloader
-
-# 3) Migraciones y clave (omití key:generate porque ya la tenés)
+# 2) Ejecutar migraciones
 php artisan migrate --force
 
-# 4) Cacheo final
+# 3) Cacheo final
 php artisan config:cache
 php artisan route:cache
 php artisan view:cache
 
-# 5) Asegurarnos de que exista el log
+# 4) Asegurar que exista el archivo de log
 mkdir -p storage/logs
 touch storage/logs/laravel.log
 chmod 666 storage/logs/laravel.log
 
-# 6) Imprimir errores
+# 5) Mostrar errores recientes
 echo "=== ÚLTIMOS ERRORES DE LARAVEL ==="
 tail -n 30 storage/logs/laravel.log || true
 echo "================================="
+
+# 6) Iniciar Apache
+apache2-foreground

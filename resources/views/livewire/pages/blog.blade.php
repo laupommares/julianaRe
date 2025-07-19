@@ -5,7 +5,7 @@
             <div class="container flex items-center justify-center">
                 <div class="bg-white h-[746px] w-full relative flex flex-col text-dark my-16">
                     <div class="w-full flex justify-center">
-                        <h1 class="font-slab text-4xl text-center mb-16">Consejos y bienestar</h1>
+                        <h1 class="font-serif font-bold text-4xl text-center mb-16">Consejos y bienestar</h1>
                     </div>
                     <div class="flex flex-row gap-8">
                         <div x-data="{ current: 0, total: {{ $articles->count() }} }" class="flex flex-col items-center">

@@ -40,11 +40,10 @@ class Login extends Component
         Auth::logout();
         return redirect('/'); // O la ruta que prefieras después de cerrar sesión
     }
-public function render()
-{
-    return view('livewire.components.controls.login')
-        ->layout('livewire.layouts.auth'); // usa el layout limpio
-}
-
+    public function render()
+    {
+        return view('livewire.components.controls.login')
+            ->layout('livewire.layouts.auth'); // usa el layout limpio
+    }
 
 }

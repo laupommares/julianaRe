@@ -70,8 +70,8 @@
                         Acompañarse en procesos de salud, vínculos, duelos o cambios laborales.
                     </li>
                 </ul>
-                <a href="{{ route('contact', ['issue' => 'talleres']) }}"
-                    class="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white bg-orange focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10">Recibir info</a>
+                <a 
+                   href="" class="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white bg-orange focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10">Recibir info</a>
             </div>
             <div class="relative rounded-3xl bg-dark-gray p-8 ring-1 shadow-2xl ring-gray-900/10">
                 <h3 id="tier-enterprise" class="text-base/7 font-semibold text-orange">4 semanas</h3>
@@ -120,7 +120,7 @@
                         Opcional: encuentros presenciales puntuales.
                     </li>
                 </ul>
-                <a href="{{ route('contact', ['issue' => 'balance']) }}"
+                <a href=""
                     class="mt-8 block rounded-md bg-orange px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 sm:mt-10">Recibir
                     info</a>
             </div>
@@ -173,7 +173,7 @@
                         Ejercicios para empezar a trabajar tus emociones, hábitos o pensamientos.
                     </li>
                 </ul>
-                <a href="{{ route('contact', ['issue' => 'recursos-gratuitos']) }}"
+                <a href=""
                     class="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white bg-orange focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:mt-10">Recibir info</a>
             </div>
         </div>

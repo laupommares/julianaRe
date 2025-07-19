@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Livewire\Components\Controls\Login;
 use App\Livewire\Pages\Home;
 use App\Livewire\Pages\AboutMe;
-use App\Livewire\Pages\Contact;
 use App\Livewire\Pages\Blog;
 use App\Livewire\Pages\Recipes;
 use App\Livewire\Components\Search\ShowDetail;
@@ -18,7 +17,6 @@ use App\Livewire\UserProfile;
 
 Route::get('/', Home::class)->name('livewire.pages.home');
 Route::get('/about-me', AboutMe::class)->name('livewire.pages.about-me');
-Route::get('/contact', Contact::class)->name('contact');
 Route::get('/blog', Blog::class)->name('livewire.pages.blog');
 Route::get('/recipes', Recipes::class)->name('livewire.pages.recipes');
 Route::get('/login', \App\Livewire\Components\Controls\Login::class)->name('login');

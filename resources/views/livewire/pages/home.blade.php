@@ -1,25 +1,38 @@
 <div>
-    <header id="header" class="bg-cover bg-center h-[880px]" style="background-image: url('/header.png');">
-        <div class="relative container flex justify-end h-full items-end">
-            <div class="mb-14 card card-compact max-w-[462px] shadow-xl bg-white absolute bottom-0">
-                <figure class="relative w-full pt-4 px-4 scroll-px-48">
-                    <img class="inset-0 w-full object-cover object-top h-[340px]" src="{{ asset('tunos.jpg') }}" alt="">
-                </figure>
-                <div class="card-body text-dark bg-white">
-                    <h2 class="card-title">Nutrición real para una vida real.</h2>
-                    <p class="text-base">Soy Juliana Re, y estoy acá para acompañarte a lograr una relación más sana y
-                        real con la comida. Juntas vamos a construir hábitos sostenibles, sin dietas imposibles ni
-                        culpa.
-                        Estás a un paso de empezar a sentirte mejor, en cuerpo y mente.</p>
-                    <div class="card-actions justify-end">
-                        <button
-                            class="text-dark w-[430px] h-10 flex items-center justify-center font-semibold bg-green px-4 py-2 rounded-sm text-xl">Conocer
-                            programas o sacar turno</button>
-                    </div>
+    <section class="relative bg-white pt-40 pb-24 overflow-hidden max-h-[90vh]">
+        <!-- Fondo con ilustración -->
+        <div
+            class="absolute inset-0 bg-[url('/bg-dibujos.svg')] bg-no-repeat bg-[length:600px] bg-right-top opacity-20 pointer-events-none">
+        </div>
+
+        <div class="container relative z-10 flex flex-col md:flex-row items-center gap-12">
+            <!-- Texto -->
+            <div class="md:w-1/2">
+                <h1 class="text-4xl md:text-5xl font-bold text-dark font-serif leading-tight mb-6">
+                    Un espacio para reconectar con tu bienestar
+                </h1>
+                <p class="text-lg text-dark font-serif leading-relaxed">
+                    Soy Juliana, nutricionista y coach ontológica. Acompaño desde la experiencia, el respeto y la
+                    conciencia a quienes buscan sanar su relación con el cuerpo, la alimentación y su propósito.
+                </p>
+                <p class="italic text-dark font-serif text-right p-8">Con amor, Juliana ✨</p>
+                <div>
+                    <a href="#programas"
+                        class="bg-orange text-dark px-6 py-3 rounded-lg font-semibold text-lg shadow hover:bg-light-orange transition inline-block">
+                        Conocer programas
+                    </a>
                 </div>
+
+            </div>
+
+            <!-- Imagen -->
+            <div class="md:w-1/2">
+                <img src="{{ asset('tunos.jpg') }}" alt="Juliana Re"
+                    class="rounded-xl shadow-lg w-full max-w-sm mx-auto object-cover">
             </div>
         </div>
-    </header>
+    </section>
+    <div class="h-6 w-full bg-green"></div>
 
     <livewire:components.stadistics />
     {{--
@@ -28,6 +41,4 @@
     <livewire:pages.recipes isPreview="true" />
     <livewire:pages.about-me isPreview=true />
     <livewire:components.programs />
-    <livewire:pages.contact>
-
 </div>

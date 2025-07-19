@@ -40,5 +40,7 @@
     <livewire:pages.blog isPreview=true />
     <livewire:pages.recipes isPreview="true" />
     <livewire:pages.about-me isPreview=true />
-    <livewire:components.programs />
+    <div id="programas">
+        <livewire:components.programs />
+    </div>
 </div>

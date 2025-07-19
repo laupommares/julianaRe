@@ -3,7 +3,8 @@
         <div class="relative w-[420px] h-9">
             <input 
                 type="text" 
-                class="w-full h-full pl-3 pr-10 rounded-md border border-gray-300 focus:border-gray-500 focus:outline-none text-dark" 
+                class="w-full h-full pl-3 pr-10 rounded-md border border-gray-300 focus:border-gray-500 focus:outline-none text-dark focus:ring focus:ring-blue
+" 
                 wire:model.live.debounce.500="searchText"
                 placeholder="Buscar..."
             >

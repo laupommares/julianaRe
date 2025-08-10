@@ -47,6 +47,7 @@ RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cac
 # 2.10) Copiar el script de inicio
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 # 2.11) Comando de inicio
 ENTRYPOINT ["/start.sh"]

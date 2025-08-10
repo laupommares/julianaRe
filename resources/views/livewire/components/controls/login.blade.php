@@ -35,14 +35,6 @@
                 </div>
             @endif
         </form>
-
-        <!-- Link de registro -->
-        <p class="mt-6 text-sm text-dark">
-            ¿Todavía no tenés cuenta?
-            <a href="#" wire:click.prevent="$dispatch('open-register-modal')" class="font-bold text-blue hover:underline">
-                Registrate acá
-            </a>
-        </p>
     </div>
 </div>
 

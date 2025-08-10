@@ -18,22 +18,22 @@
                     <h1>Juliana Re</h1>
                 </div>
                 <ul class="flex flex-col items-center gap-2 w-full">
-                    <li class="flex items-center gap-2 group hover:bg-medium-gray  fo px-4 py-2 rounded-md w-full">
+                    <li class="flex items-center gap-2 group hover:bg-medium-gray  fo px-4 py-2 rounded-md w-full group cursor-pointer">
                         <span class="material-symbols-outlined text-medium-gray text-2xl font-bold align-middle group-hover:text-white">dashboard</span>
                         <a href="/dashboard" class="group-hover:text-white">Admin Dashboard</a>
                     </li>
-                    <li class="flex items-center gap-2 group hover:bg-medium-gray px-4 py-2 rounded-md w-full">
+                    <li class="flex items-center gap-2 group hover:bg-medium-gray px-4 py-2 rounded-md w-full group cursor-pointer">
                         <span class="material-symbols-outlined text-medium-gray group-hover:text-white text-2xl font-bold align-middle">news</span>
                         <a href="/dashboard/articles" class="group-hover:text-white">Artículos</a>
                     </li>
-                    <li class="flex items-center gap-2 group hover:bg-medium-gray px-4 py-2 rounded-md w-full">
+                    <li class="flex items-center gap-2 group hover:bg-medium-gray px-4 py-2 rounded-md w-full group cursor-pointer">
                         <span class="material-symbols-outlined text-medium-gray group-hover:text-white text-2xl font-bold align-middle">grocery</span>
                         <a href="/dashboard/recipes" class="group-hover:text-white">Recetas</a>
                     </li>
                 </ul>
                 <div class="w-full bg-medium-gray h-[1px] my-8"></div>
                 <ul class="flex flex-col items-center gap-2 w-full">
-                    <li class="flex items-center gap-2 group hover:bg-medium-gray px-4 py-2 rounded-md w-full">
+                    <li class="flex items-center gap-2 group hover:bg-medium-gray px-4 py-2 rounded-md w-full group cursor-pointer">
                         <span class="material-symbols-outlined text-medium-gray hover text-2xl font-bold align-middle group-hover:text-white">home</span>
                         <a href="/" class="group-hover:text-white">Home</a>
                     </li>

@@ -29,7 +29,7 @@ class Login extends Component
             
             $this->isAuthenticated = true; // ✅ ACTUALIZAR el estado de autenticación
             
-            return redirect()->route('livewire.pages.home'); 
+            return redirect()->intended('/dashboard');
         }
     
         session()->flash('error', 'El usuario o la contraseña no son correctos.');
@@ -42,6 +42,8 @@ class Login extends Component
     }
     public function render()
     {
-        return view('livewire.components.controls.login'); // Asegúrate de que la vista sea correcta
+        return view('livewire.components.controls.login')
+            ->layout('livewire.layouts.auth'); // usa el layout limpio
     }
+
 }

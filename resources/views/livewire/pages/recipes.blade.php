@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="flex items-center justify-center">
                     <div class="w-full flex flex-col justify-center items-center my-10 text-dark gap-8">
-                        <h1 class="font-slab text-4xl">Comé rico todos los días</h1>
+                        <h1 class="font-serif font-bold text-4xl">Comé rico todos los días</h1>
                         <p class="text-base font-light leading-8 text-center">
                             Descubrí recetas saludables, fáciles y sabrosas para sumar sabor, variedad y bienestar a tu
                             alimentación diaria.

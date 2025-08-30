@@ -26,5 +26,8 @@ COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 # Exponer puerto que Render usa
 EXPOSE 10000
 
+RUN chmod -R 775 storage bootstrap/cache
+
+
 # Iniciar Nginx y PHP-FPM
 CMD service nginx start && php-fpm

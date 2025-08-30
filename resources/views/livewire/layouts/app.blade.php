@@ -16,7 +16,6 @@
         <div> {{-- Contenedor principal para Livewire --}}
             {{ $slot }}
         </div>
-    
 
     </body>
 </html>
